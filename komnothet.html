@@ -1,0 +1,559 @@
+
+ <!doctype html>
+<html lang="km">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ប្រព័ន្ធកំណត់ហេតុកំពង់ផែទេសចរណ៍</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+
+  <body class="bg-gray-100 font-sans">
+
+    <!-- Main Container -->
+    <div class="max-w-5xl mx-auto p-5">
+
+      <!-- Card -->
+      <div class="bg-white rounded-2xl shadow-lg p-8">
+
+        <!-- Title -->
+        <h2 class="text-3xl font-bold text-center text-blue-600 mb-8">
+          📋 កំណត់ហេតុប្រចាំថ្ងៃរបស់ក្រសួងទេសចរណ៍
+        </h2>
+
+        <!-- Form -->
+        <div class="space-y-5">
+
+          <!-- Location -->
+          <div>
+            <label class="block font-semibold mb-2 text-gray-700">
+              ឈ្មោះតំបន់ទេសចរណ៍
+            </label>
+
+            <input
+              type="text"
+              id="location"
+              placeholder="ឧទាហរណ៍៖ ប្រាសាទអង្គរវត្ត"
+              class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            />
+          </div>
+
+          <!-- Province -->
+          <div>
+            <label class="block font-semibold mb-2 text-gray-700">
+              ខេត្ត/ក្រុង
+            </label>
+
+            <select
+              id="province"
+              class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            >
+              <option value="សៀមរាប">សៀមរាប</option>
+              <option value="ភ្នំពេញ">ភ្នំពេញ</option>
+              <option value="ព្រះសីហនុ">ព្រះសីហនុ</option>
+              <option value="កំពត">កំពត</option>
+              <option value="ផ្សេងៗ">ផ្សេងៗ</option>
+            </select>
+          </div>
+
+          <!-- Count -->
+          <div>
+            <label class="block font-semibold mb-2 text-gray-700">
+              ចំនួនភ្ញៀវសរុប (នាក់)
+            </label>
+
+            <input
+              type="number"
+              id="count"
+              placeholder="0"
+              class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            />
+          </div>
+
+          <!-- Note -->
+          <div>
+            <label class="block font-semibold mb-2 text-gray-700">
+              កំណត់ចំណាំ
+            </label>
+
+            <textarea
+              id="note"
+              rows="4"
+              placeholder="ព័ត៌មានបន្ថែម..."
+              class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            ></textarea>
+          </div>
+
+          <!-- Button -->
+          <button
+            onclick="addLog()"
+            class="w-full bg-green-600 hover:bg-green-700 text-white font-semibold py-3 rounded-lg transition duration-300"
+          >
+            រក្សាទុកទិន្នន័យ
+          </button>
+        </div>
+
+        <!-- Navigation -->
+        <div class="mt-6">
+          <a
+            href="TT.HTML"
+            class="text-blue-600 border-b-2 border-blue-600 hover:text-blue-800"
+          >
+            តារាងទិន្នន័យបន្ថែម
+          </a>
+        </div>
+
+        <!-- Table -->
+        <div class="mt-10 overflow-x-auto">
+
+          <h3 class="text-2xl font-bold mb-4 text-gray-800">
+            បញ្ជីទិន្នន័យដែលបានបញ្ចូល
+          </h3>
+
+          <table class="min-w-full border border-gray-300 rounded-lg overflow-hidden">
+
+            <thead class="bg-blue-600 text-white">
+              <tr>
+                <th class="px-4 py-3 border">កាលបរិច្ឆេទ</th>
+                <th class="px-4 py-3 border">តំបន់</th>
+                <th class="px-4 py-3 border">ខេត្ត</th>
+                <th class="px-4 py-3 border">ចំនួនភ្ញៀវ</th>
+                <th class="px-4 py-3 border">ចំណាំ</th>
+              </tr>
+            </thead>
+ <tbody id="tableBody" class="bg-white text-gray-700">
+              <tr>
+                <td colspan="5" class="text-center py-5 text-gray-400">
+                  ទិន្នន័យនឹងបង្ហាញនៅទីនេះ
+                </td>
+              </tr>
+            </tbody>
+
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-indigo-950 text-white mt-16 px-6 md:px-20 py-12 relative">
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+
+        <!-- Logo -->
+        <div>
+          <img
+            src="https://asset.cambodia.gov.kh/tourism/2023/11/web-logo.png"
+            alt="Logo"
+            class="w-28"
+          />
+        </div>
+
+        <!-- Information -->
+        <div>
+          <h3 class="text-2xl font-bold mb-5">
+            ក្រសួងទេសចរណ៍
+          </h3>
+
+          <div class="space-y-4 text-sm">
+
+            <div class="flex items-start gap-3">
+              <i class="fa-solid fa-location-dot mt-1"></i>
+
+              <span>
+                ដីឡូត៍លេខ៣អា ផ្លូវលេខ១៦៩ សង្កាត់វាលវង់
+                ខណ្ឌ៧មករា រាជធានីភ្នំពេញ
+              </span>
+            </div>
+
+            <div class="flex items-center gap-3">
+              <i class="fa-solid fa-phone"></i>
+
+              <span>
+                (+៨៥៥) ០២៣ ៨៨៤ ៩៧២ /
+                (+៨៥៥) ០២៣ ៨៨៤ ៩៨៨
+              </span>
+            </div>
+
+            <div class="flex items-center gap-3">
+              <i class="fa-solid fa-envelope-open-text"></i>
+
+              <span>
+                ច្រកចេញចូលតែមួយ 1221
+                (មិនគិតថ្លៃសេវាពីគ្រប់ប្រព័ន្ធ)
+              </span>
+            </div>
+
+            <div class="flex items-center gap-3">
+              <i class="fa-solid fa-envelope"></i>
+
+              <span>
+                ព័ត៌មានទូទៅ:
+                <a
+                  href="mailto:info@tourism.gov.kh"
+                  class="underline hover:text-blue-300"
+                >
+                  info@tourism.gov.kh
+                </a>
+              </span>
+            </div>
+
+            <div class="flex items-center gap-3">
+              <i class="fa-solid fa-envelope"></i>
+
+              <span>
+                ដោះស្រាយវិវាទ:
+                <a
+                  href="mailto:conflict@tourism.gov.kh"
+                  class="underline hover:text-blue-300"
+                >
+                  conflict@tourism.gov.kh
+                </a>
+              </span>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Social -->
+        <div>
+          <h3 class="text-2xl font-bold mb-5">
+            បណ្តាញសង្គម
+          </h3>
+
+          <div class="flex gap-3 flex-wrap">
+
+            <a
+              href="#"
+              class="w-10 h-10 flex items-center justify-center border border-white rounded-lg hover:bg-white hover:text-indigo-950 transition"
+            >
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
+
+            <a
+              href="#"
+              class="w-10 h-10 flex items-center justify-center border border-white rounded-lg hover:bg-white hover:text-indigo-950 transition"
+            >
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+
+            <a
+              href="#"
+              class="w-10 h-10 flex items-center justify-center border border-white rounded-lg hover:bg-white hover:text-indigo-950 transition"
+            >
+              X
+            </a>
+
+            <a
+              href="#"
+              class="w-10 h-10 flex items-center justify-center border border-white rounded-lg hover:bg-white hover:text-indigo-950 transition"
+            >
+              <i class="fa-brands fa-youtube"></i>
+            </a>
+
+            <a
+              href="#"
+              class="w-10 h-10 flex items-center justify-center border border-white rounded-lg hover:bg-white hover:text-indigo-950 transition"
+            >
+              <i class="fa-brands fa-telegram"></i>
+            </a>
+ <a
+              href="#"
+              class="w-10 h-10 flex items-center justify-center border border-white rounded-lg hover:bg-white hover:text-indigo-950 transition"
+            >
+              <i class="fa-brands fa-tiktok"></i>
+            </a>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- Divider -->
+      <hr class="my-8 border-gray-600" />
+
+      <!-- Copyright -->
+      <p class="text-center text-sm">
+        &copy; ២០២៦ រក្សាសិទ្ធិដោយក្រសួងទេសចរណ៍
+      </p>
+
+      <!-- Back To Top -->
+      <button
+        onclick="topFunction()"
+        class="absolute bottom-5 right-5 text-2xl hover:text-gray-300 transition"
+      >
+        <i class="fa-solid fa-arrow-up"></i>
+      </button>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+      function addLog() {
+        let location = document.getElementById("location").value;
+        let province = document.getElementById("province").value;
+        let count = document.getElementById("count").value;
+        let note = document.getElementById("note").value;
+        let date = new Date().toLocaleDateString("km-KH");
+
+        if (location === "" || count === "") {
+          alert("សូមបំពេញព័ត៌មានឱ្យបានគ្រប់គ្រាន់!");
+          return;
+        }
+
+        let tableBody = document.getElementById("tableBody");
+
+        if (tableBody.innerText.includes("ទិន្នន័យនឹងបង្ហាញនៅទីនេះ")) {
+          tableBody.innerHTML = "";
+        }
+
+        let newRow = document.createElement("tr");
+
+        newRow.className = "hover:bg-gray-100";
+
+        newRow.innerHTML = `
+          <td class="border px-4 py-3">${date}</td>
+          <td class="border px-4 py-3">${location}</td>
+          <td class="border px-4 py-3">${province}</td>
+          <td class="border px-4 py-3">${count}</td>
+          <td class="border px-4 py-3">${note}</td>
+        `;
+
+        tableBody.appendChild(newRow);
+
+        document.getElementById("location").value = "";
+        document.getElementById("count").value = "";
+        document.getElementById("note").value = "";
+      }
+
+      function topFunction() {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      }
+    </script>
+
+  </body>
+</html>
+ <tr class="hover:bg-blue-50">
+                <td class="p-4 border-b font-bold text-left">
+                  តំបន់សៀមរាប-អង្គរ
+                </td>
+                <td class="p-4 border-b text-center">១,២០០,០០០</td>
+                <td class="p-4 border-b text-center">៩៥០,០០០</td>
+                <td class="p-4 border-b text-center">២,១៥០,០០០</td>
+                <td class="p-4 border-b text-green-600 font-bold text-center">
+                  +៨២%
+                </td>
+              </tr>
+
+              <tr class="bg-gray-50 hover:bg-blue-50">
+                <td class="p-4 border-b font-bold text-left">
+                  រាជធានីភ្នំពេញ
+                </td>
+                <td class="p-4 border-b text-center">៨៥០,០០០</td>
+                <td class="p-4 border-b text-center">៦០០,០០០</td>
+                <td class="p-4 border-b text-center">១,៤៥០,០០០</td>
+                <td class="p-4 border-b text-green-600 font-bold text-center">
+                  +២៨%
+                </td>
+              </tr>
+
+              <tr class="hover:bg-blue-50">
+                <td class="p-4 border-b font-bold text-left">
+                  តំបន់ឆ្នេរសមុទ្រ (កំពង់សោម/កំពត)
+                </td>
+                <td class="p-4 border-b text-center">១,៥០០,០០០</td>
+                <td class="p-4 border-b text-center">៤០០,០០០</td>
+                <td class="p-4 border-b text-center">១,៩០០,០០០</td>
+                <td class="p-4 border-b text-green-600 font-bold text-center">
+                  +១៨%
+                </td>
+              </tr>
+
+              <tr class="bg-gray-50 hover:bg-blue-50">
+                <td class="p-4 border-b font-bold text-left">
+                  ក្រុងព្រះសីហនុ
+                </td>
+                <td class="p-4 border-b text-center">១,០៥០,០០០</td>
+                <td class="p-4 border-b text-center">២០០,០០០</td>
+                <td class="p-4 border-b text-center">១,២៥០,០០០</td>
+                <td class="p-4 border-b text-green-600 font-bold text-center">
+                  +១០%
+                </td>
+              </tr>
+
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Footer -->
+        <div class="mt-10 text-center text-sm text-gray-500 border-t pt-6">
+          <p>
+            ប្រភពទិន្នន័យ៖ នាយកដ្ឋានស្ថិតិទេសចរណ៍
+            នៃក្រសួងទេសចរណ៍
+          </p>
+
+          <p class="mt-2">
+            របាយការណ៍នេះបង្កើតឡើងដោយស្វ័យប្រវត្តិ
+            សម្រាប់គោលបំណងបង្ហាញព័ត៌មាន
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer
+      class="bg-indigo-950 text-white mt-16 px-6 md:px-20 py-12 relative"
+    >
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+
+        <!-- Logo -->
+        <div>
+          <img
+            src="https://asset.cambodia.gov.kh/tourism/2023/11/web-logo.png"
+            alt="Logo"
+            class="w-28"
+          />
+        </div>
+
+        <!-- Information -->
+        <div>
+
+          <h3 class="text-2xl font-bold mb-5">
+            ក្រសួងទេសចរណ៍
+          </h3>
+
+          <div class="space-y-4 text-sm">
+
+            <div class="flex items-start gap-3">
+              <i class="fa-solid fa-location-dot mt-1"></i>
+
+              <span>
+                ដីឡូត៍លេខ៣អា ផ្លូវលេខ១៦៩
+                សង្កាត់វាលវង់ ខណ្ឌ៧មករា
+                រាជធានីភ្នំពេញ
+              </span>
+            </div>
+
+            <div class="flex items-center gap-3">
+              <i class="fa-solid fa-phone"></i>
+
+              <span>
+                (+៨៥៥) ០២៣ ៨៨៤ ៩៧២ /
+                (+៨៥៥) ០២៣ ៨៨៤ ៩៨៨
+              </span>
+            </div>
+
+            <div class="flex items-center gap-3">
+              <i class="fa-solid fa-envelope-open-text"></i>
+
+              <span>
+                ច្រកចេញចូលតែមួយ 1221
+              </span>
+            </div>
+
+            <div class="flex items-center gap-3">
+              <i class="fa-solid fa-envelope"></i>
+
+              <a
+                href="mailto:info@tourism.gov.kh"
+                class="underline hover:text-blue-300"
+              >
+                info@tourism.gov.kh
+              </a>
+            </div>
+ </div>
+        </div>
+
+        <!-- Social -->
+        <div>
+
+          <h3 class="text-2xl font-bold mb-5">
+            បណ្តាញសង្គម
+          </h3>
+
+          <div class="flex gap-3 flex-wrap">
+
+            <a
+              href="#"
+              class="w-10 h-10 flex items-center justify-center border border-white rounded-lg hover:bg-white hover:text-indigo-950 transition"
+            >
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
+
+            <a
+              href="#"
+              class="w-10 h-10 flex items-center justify-center border border-white rounded-lg hover:bg-white hover:text-indigo-950 transition"
+            >
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+
+            <a
+              href="#"
+              class="w-10 h-10 flex items-center justify-center border border-white rounded-lg hover:bg-white hover:text-indigo-950 transition"
+            >
+              X
+            </a>
+
+            <a
+              href="#"
+              class="w-10 h-10 flex items-center justify-center border border-white rounded-lg hover:bg-white hover:text-indigo-950 transition"
+            >
+              <i class="fa-brands fa-youtube"></i>
+            </a>
+
+            <a
+              href="#"
+              class="w-10 h-10 flex items-center justify-center border border-white rounded-lg hover:bg-white hover:text-indigo-950 transition"
+            >
+              <i class="fa-brands fa-telegram"></i>
+            </a>
+
+            <a
+              href="#"
+              class="w-10 h-10 flex items-center justify-center border border-white rounded-lg hover:bg-white hover:text-indigo-950 transition"
+            >
+              <i class="fa-brands fa-tiktok"></i>
+            </a>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- Divider -->
+      <hr class="my-8 border-gray-600" />
+
+      <!-- Copyright -->
+      <p class="text-center text-sm">
+        &copy; ២០២៦ រក្សាសិទ្ធិដោយក្រសួងទេសចរណ៍
+      </p>
+
+      <!-- Back To Top -->
+      <button
+        onclick="topFunction()"
+        class="absolute bottom-5 right-5 text-2xl hover:text-gray-300 transition"
+      >
+        <i class="fa-solid fa-arrow-up"></i>
+      </button>
+    </footer>
+
+    <!-- Script -->
+    <script>
+      function topFunction() {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      }
+    </script>
+
+  </body>
+</html>

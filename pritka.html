@@ -1,0 +1,764 @@
+ [5/7/2026 5:44 PM] NOY VICHHAI: <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tourism Cambodia</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind = {
+            darkMode: 'class'
+        }
+    </script>
+
+    <!-- Flowbite CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body class="dark:bg-gray-900 bg-white">
+    <!-- Navbar -->
+    <header class=" w-full sticky top-0 z-50">
+        <nav class="bg-blue-600 dark:bg-gray-900  text-white dark:text-gray-300 shadow-lg ">
+            <div class="container mx-auto flex flex-wrap  p-4 gap-4">
+                <div>
+                    <img src="https://asset.cambodia.gov.kh/tourism/2023/11/web-logo.png" alt="Logo"
+                        class="w-12 h-12 object-contain">
+                </div>
+                <h1 class="text-2xl font-bold text-left">
+                    Tourism Cambodia
+                </h1>
+                
+                <div class="ml-auto flex items-center gap-4">
+                     <button class="buttonToggle"><i class="fa-solid fa-moon iconChange"></i></button>
+                </div>
+                
+            </div>
+        </nav>
+    </header>
+    <!-- Carousel -->
+    <section class="container h-150 ">
+        <div id="default-carousel" class="relative w-full" data-carousel="slide">
+
+            <!-- Carousel wrapper -->
+            <div class="relative  overflow-hidden h-96">
+
+                <!-- Item 1 -->
+                <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                    <img src="https://demo.cambodia.gov.kh/wp-content/uploads/2021/06/%E1%9E%94%E1%9F%92%E1%9E%9A%E1%9E%B6%E1%9E%9F%E1%9E%B6%E1%9E%91%E1%9E%A2%E1%9E%84%E1%9F%92%E1%9E%82%E1%9E%9A%E1%9E%9C%E1%9E%8F%E1%9F%92%E1%9E%8F-%E1%9E%AC%E1%9E%94%E1%9F%92%E1%9E%9A%E1%9E%B6%E1%9E%9F%E1%9E%B6%E1%9E%91%E1%9E%A2%E1%9E%84%E1%9F%92%E1%9E%82%E1%9E%9A%E1%9E%8F%E1%9E%BC%E1%9E%85-1.jpg"
+                        class="absolute block  object-cover" alt="Angkor Wat">
+                </div>
+
+                <!-- Item 2 -->
+                <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                    <img src="https://s9.kh1.co/image/w=650,h=391,q=100/54/546f319ca6c822b6be74501f4888378c250127b5.jpg"
+                        class="absolute block w-full h-full object-cover" alt="Cambodia Tourism">
+                </div>
+
+                <!-- Item 3 -->
+                <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                    <img src="https://i.pinimg.com/736x/e9/04/dd/e904dd0bcbdcd93896484df40a98d443.jpg"
+                        class="absolute block w-full h-full object-cover" alt="Beach">
+                </div>
+
+            </div>
+
+            <!-- Slider indicators -->
+            <div class="absolute z-30 flex space-x-3 -translate-x-1/2 bottom-5 left-1/2">
+
+                <button type="button" class="w-3 h-3 rounded-full bg-white" aria-current="true" aria-label="Slide 1"
+                    data-carousel-slide-to="0">
+                </button>
+
+                <button type="button" class="w-3 h-3 rounded-full bg-white" aria-current="false" aria-label="Slide 2"
+                    data-carousel-slide-to="1">
+                </button>
+
+                <button type="button" class="w-3 h-3 rounded-full bg-white" aria-current="false" aria-label="Slide 3"
+                    data-carousel-slide-to="2">
+                </button>
+
+            </div>
+
+            <!-- Previous Button -->
+            <button type="button"
+                class="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer gro
+​​​ up"
+                data-carousel-prev>
+
+                <span
+                    class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 group-hover:bg-white/50">
+
+                    <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                    </svg>
+
+                </span>
+            </button>
+
+            <!-- Next Button -->
+            <button type="button"
+                class="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group"
+                data-carousel-next>
+
+                <span
+                    class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 group-hover:bg-white/50">
+
+                    <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                    </svg>
+
+                </span>
+            </button>
+
+        </div>
+    </section>
+    <!-- Event Section -->
+     <section class="container mx-auto py-16 px-6">
+         <h2 class="text-blue-600 text-center font-bold text-3xl mt-10">
+           ទេសចរណ៍កម្ពុជា
+        </h2>
+        <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8 mt-10">
+            <!-- Card 1 -->
+            <div
+                class="bg-white dark:bg-gray-900 dark:text-white shadow-lg overflow-hidden hover:scale-105 transition duration-300 rounded-lg">
+
+                <img src="https://cdn.cambonomist.com/media/images/276142184_332295255597906_46515770.2e16d0ba.fill-640x360.jpg"
+                    class="w-full h-72 object-cover rounded-b-lg" alt="Event">
+
+                <div class="p-5">
+                    <h3 class="text-xl font-bold mb-2">
+                        ទិដ្ឋភាពភ្ញៀវទេសចរណ៍ជាតិ​ និងអន្តរជាតិ​ អញ្ជេីញទស្សនាព្រះអាទិត្យរះចំកណ្តាលកំពូលប្រាសាទអង្គរវត្ត​ នាឱកាសព្រឹត្តិការណ៍សមរាត្រី
+                    </h3>
+                </div>
+
+            </div>
+
+            <!-- Card 2 -->
+            <div
+                class="bg-white dark:bg-gray-900 dark:text-white rounded-lg shadow-lg overflow-hidden hover:scale-105 transition duration-300">
+
+                <img src="https://asset.cambodia.gov.kh/tourism/2025/10/photo_8_2025-10-02_09-11-24.jpg"
+                    class="w-full h-72 object-cover rounded-2xl" alt="Event">
+
+                <div class="p-5">
+                    <h3 class="text-xl font-bold mb-2">
+                        រដូវកាលបៃតង ក្នុងខេត្តសៀមរាប បានបង្កើននូវទិដ្ឋភាពដ៏អស្ចារ្យនិងប្លែកភ្នែកទស្សនា ចម្លាក់មានសក់ នៅខ្លោងទ្វារខ្មោច
+                    </h3>
+                </div>
+
+            </div>
+
+            <!-- Card 3 -->
+            <div
+                class="bg-white dark:bg-gray-900 dark:text-white rounded-lg shadow-lg overflow-hidden hover:scale-105 transition duration-300">
+
+                <img src="https://asset.cambodia.gov.kh/tourism/2024/02/photo_2024-02-24_21-05-54.jpg"
+                    class="w-full h-72 object-cover rounded-b-lg" alt="Event">
+
+                <div class="p-5">
+                    <h3 class="text-xl font-bold mb-2">
+                        ដំណើរមើលថ្ងៃលិចដ៏អស្ចារ្យ ក្នុងខេត្តសៀមរាប ជាមួយការ ជិះប៉េងប៉ោងខ្យល់
+
+                    </h3>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+    <section class="container mx-auto py-16 px-6">
+        <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8 mt-10">
+
+            <!-- Card 1 -->
+            <div
+                class="bg-white dark:bg-gray-900 dark:text-white shadow-lg overflow-hidden hover:scale-105 transition duration-300 rounded-lg">
+
+                <img src="https://i.pinimg.com/736x/b6/0d/3a/b60d3a9a040eb217b3739e4d667a2e4a.jpg"
+                    class="w-full h-72 object-cover rounded-b-lg" alt="Event">
+
+                <div class="p-5">
+                    <h3 class="text-xl font-bold mb-2">
+                  របាំអប្សារា  
+                    </h3>
+                </div>
+
+            </div>
+
+            <!-- Card 2 -->
+            <div
+                class="bg-white dark:bg-gray-900 dark:text-white rounded-lg shadow-lg overflow-hidden hover:scale-105 transition duration-300">
+
+                <img src="https://i.pinimg.com/736x/f6/45/03/f64503bf42e55533e28a61a36e9b1050.jpg"
+                    class="w-full h-72 object-cover rounded-2xl" alt="Event">
+
+                <div class="p-5">
+                    <h3 class="text-xl font-bold mb-2">
+                        របាំត្រុដិ
+                    </h3>
+                </div>
+
+            </div>
+
+            <!-- Card 3 -->
+            <div
+                class="bg-white dark:bg-gray-900 dark:text-white rounded-lg shadow-lg overflow-hidden hover:scale-105 transition duration-300">
+
+                <img src="https://i.pinimg.com/1200x/39/09/31/3909318271a153603b94e639e26451e6.jpg"
+                    class="w-full h-72 object-cover rounded-b-lg" alt="Event">
+
+                <div class="p-5">
+                    <h3 class="text-xl font-bold mb-2">
+                       របាំព្រះរាជទ្រព្យ
+                    </h3>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+    <section class="container mx-auto py-16 px-6">
+        <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8 mt-10">
+
+            <!-- Card 1 -->
+            <div
+                class="bg-white dark:bg-gray-900 dark:text-white shadow-lg overflow-hidden hover:scale-105 transition duration-300 rounded-lg">
+
+                <img src="https://i.pinimg.com/736x/10/0d/68/100d68c6aa779fb9d96fbb59fe083bfe.jpg"
+                    class="w-full h-72 object-cover rounded-b-lg" alt="Event">
+
+                <div class="p-5">
+                    <h3 class="text-xl font-bold mb-2">
+                      ផ្ការំដួល
+                    </h3>
+                </div>
+
+            </div>
+
+            <!-- Card 2 -->
+            <div
+                class="bg-white dark:bg-gray-900 dark:text-white rounded-lg shadow-lg overflow-hidden hover:scale-105 transition duration-300">
+
+                <img src="https://i.pinimg.com/1200x/61/af/04/61af04717e30d7ecb7908f86106dfc4d.jpg"
+                    class="w-full h-72 object-cover rounded-2xl" alt="Event">
+
+                <div class="p-5">
+                    <h3 class="text-xl font-bold mb-2">
+                        ដើមត្នោត
+                    </h3>
+                </div>
+
+            </div>
+
+            <!-- Card 3 -->
+            <div
+                class="bg-white dark:bg-gray-900 dark:text-white rounded-lg shadow-lg overflow-hidden hover:scale-105 transition duration-300">
+
+                <img src="https://image.thmeythmey.com/pictures/2016/01/10/5xtuep.jpg"
+                    class="w-full h-72 object-cover rounded-b-lg" alt="Event">
+
+                <div class="p-5">
+                    <h3 class="text-xl font-bold mb-2">
+                       គោព្រៃ
+                    </h3>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+    <section class="container mx-auto py-16 px-6">
+        <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8 mt-10">
+
+            <!-- Card 1 -->
+            <div
+                class="bg-white dark:bg-gray-900 dark:text-white shadow-lg overflow-hidden hover:scale-105 transition duration-300 rounded-lg">
+
+                <img src="https://i.pinimg.com/1200x/a8/35/e5/a835e551510e766e4c3a21b9c2d9ee22.jpg"
+                    class="w-full h-72 object-cover rounded-b-lg" alt="Event">
+
+                <div class="p-5">
+                    <h3 class="text-xl font-bold mb-2">
+                        នំបញ្ចុក
+                    </h3>
+                </div>
+
+            </div>
+
+            <!-- Card 2 -->
+            <div
+                class="bg-white dark:bg-gray-900 dark:text-white rounded-lg shadow-lg overflow-hidden hover:scale-105 transition duration-300">
+
+                <img src="https://i.pinimg.com/1200x/19/40/7d/19407da97294ccfa37c348b60f88737d.jpg"
+         class="w-full h-72 object-cover rounded-2xl" alt="Event">
+
+                <div class="p-5">
+                    <h3 class="text-xl font-bold mb-2">
+                        អាម៉ុក
+                    </h3>
+                </div>
+
+            </div>
+
+            <!-- Card 3 -->
+            <div
+                class="bg-white dark:bg-gray-900 dark:text-white rounded-lg shadow-lg overflow-hidden hover:scale-105 transition duration-300">
+
+                <img src="https://i.pinimg.com/736x/45/99/1f/45991f537a6f576c233791be67171835.jpg"
+                    class="w-full h-72 object-cover rounded-b-lg" alt="Event">
+
+                <div class="p-5">
+                    <h3 class="text-xl font-bold mb-2">
+                        ប្រហុកអាំងជ្រុញ
+
+                    </h3>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+    <section class="container mx-auto py-16 px-6">
+        <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8 mt-10">
+
+            <!-- Card 1 -->
+            <div
+                class="bg-white dark:bg-gray-900 dark:text-white shadow-lg overflow-hidden hover:scale-105 transition duration-300 rounded-lg">
+
+                <img src="https://asset.cambodia.gov.kh/tourism/2023/11/Royal-Palace-in-Phnom-Penh-Capital-jpg.webp"
+                    class="w-full h-72 object-cover rounded-b-lg" alt="Event">
+
+                <div class="p-5">
+                    <h3 class="text-xl font-bold mb-2">
+                      មុខវាំង
+                    </h3>
+                </div>
+
+            </div>
+
+            <!-- Card 2 -->
+            <div
+                class="bg-white dark:bg-gray-900 dark:text-white rounded-lg shadow-lg overflow-hidden hover:scale-105 transition duration-300">
+
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg4aicVDncFfmOYyy8DDfo86okvijKl064IEZq-Fgz5_67uUqSjpO-rp0Jighn_QjZYvgXk6qWwmjBnzl9Bq0L1ae64ZAjPAKvFI1nSN03arXbEhWxQwwRTUDWdP4wNTnoT2WokugZYVhxO2sUDfT1aItrDzlcvNJnPYBBgcioPKaa5oCy9ofoTPBQb/s1600/Independence%20Monument.jpg"
+                    class="w-full h-72 object-cover rounded-2xl" alt="Event">
+
+                <div class="p-5">
+                    <h3 class="text-xl font-bold mb-2">
+                        វិមានឯករាជ្យ
+                    </h3>
+                </div>
+
+            </div>
+
+            <!-- Card 3 -->
+            <div
+                class="bg-white dark:bg-gray-900 dark:text-white rounded-lg shadow-lg overflow-hidden hover:scale-105 transition duration-300">
+
+                <img src="https://image.freshnewsasia.com/2021/id-021/fn-2022-03-16-18-56-48-2.jpg"
+                    class="w-full h-72 object-cover rounded-b-lg" alt="Event">
+
+                <div class="p-5">
+                    <h3 class="text-xl font-bold mb-2">
+                       ពហុកីឡដ្ឋានជាតិ"មរតកតេជោ"
+                    </h3>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+    <section class="container mx-auto py-16 px-6 ">       
+        <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8 mt-10">
+
+            <!-- Card 1 -->
+            <div
+                class="bg-white dark:bg-gray-900 dark:text-white shadow-lg overflow-hidden hover:scale-105 transition duration-300 rounded-lg">
+
+                <img src="https://asset.cambodia.gov.kh/tourism/2024/09/photo_2024-09-17_13-54-52.jpg"
+                    class="w-full h-72 object-cover rounded-b-lg" alt="Event">
+
+                <div class="p-5">
+                    <h3 class="text-xl font-bold mb-2">
+                        ទិដ្ឋភាពថតពីលើអាកាស ក្នុងព្រឹត្តិការណ៍ Gumball 3000 នៅខេត្តសៀបរាប ក្នុងទឹកដីអង្គរ
+                    </h3>
+                </div>
+
+            </div>
+
+            <!-- Card 2 -->
+            <div
+                class="bg-white dark:bg-gray-900 dark:text-white rounded-lg shadow-lg overflow-hidden hover:scale-105 transition duration-300">
+
+                <img src="https://asset.cambodia.gov.kh/tourism/2024/09/photo_2024-09-16_00-03-43.jpg"
+                    class="w-full h-72 object-cover rounded-2xl" alt="Eve
+ nt">
+
+                <div class="p-5">
+                    <h3 class="text-xl font-bold mb-2">
+                        ប្រជាពលរដ្ឋយ៉ាងច្រើនកុះករបានមក ចូលរួមស្វាគមន៍ និងអបអរសាទរព្រឹត្តិការណ៍អន្តរជាតិ GUMBALL 3000
+                    </h3>
+                </div>
+
+            </div>
+
+            <!-- Card 3 -->
+            <div
+                class="bg-white dark:bg-gray-900 dark:text-white rounded-lg shadow-lg overflow-hidden hover:scale-105 transition duration-300">
+
+                <img src="https://asset.cambodia.gov.kh/tourism/2024/09/22.jpg"
+                    class="w-full h-72 object-cover rounded-b-lg" alt="Event">
+
+                <div class="p-5">
+                    <h3 class="text-xl font-bold mb-2">
+                        ផែនទីផ្លូវការនៃព្រឹត្តិការណ៍ GUMBALL 3000 ដែលនឹងឆ្លងកាត់ទីតាំងសំខាន់ៗនៅក្នុងប្រទេសកម្ពុជា
+                    </h3>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+    <section class="container mx-auto py-16 px-6">
+        <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8 mt-10">
+
+            <!-- Card 1 -->
+            <div
+                class="bg-white dark:bg-gray-900 dark:text-white shadow-lg overflow-hidden hover:scale-105 transition duration-300 rounded-lg">
+
+                <img src="https://asset.cambodia.gov.kh/tourism/2024/10/463118534_2218128285236947_2411721988730260807_n.jpg"
+                    class="w-full h-72 object-cover rounded-b-lg" alt="Event">
+
+                <div class="p-5">
+                    <h3 class="text-xl font-bold mb-2">
+                      ខ្នងផ្សារចុងរដូវវស្សានៃខេត្តកំពង់ស្ពឺ 
+                    </h3>
+                </div>
+
+            </div>
+
+            <!-- Card 2 -->
+            <div
+                class="bg-white dark:bg-gray-900 dark:text-white rounded-lg shadow-lg overflow-hidden hover:scale-105 transition duration-300">
+
+                <img src="https://asset.cambodia.gov.kh/tourism/2024/07/449646259_2129949357388174_8573150045674469476_n.jpg"
+                    class="w-full h-72 object-cover rounded-2xl" alt="Event">
+
+                <div class="p-5">
+                    <h3 class="text-xl font-bold mb-2">
+                        តំបន់សក្តានុពលទេសចរណ៍ទឹកធ្លាក់ឆៃយ៉ាខេត្តកំពង់ស្ពឺ
+                    </h3>
+                </div>
+
+            </div>
+
+            <!-- Card 3 -->
+            <div
+                class="bg-white dark:bg-gray-900 dark:text-white rounded-lg shadow-lg overflow-hidden hover:scale-105 transition duration-300">
+
+                <img src="https://asset.cambodia.gov.kh/tourism/2024/02/427949336_780155304145230_3337798856978789445_n.jpg"
+                    class="w-full h-72 object-cover rounded-b-lg" alt="Event">
+
+                <div class="p-5">
+                    <h3 class="text-xl font-bold mb-2">
+                        ទិដ្ឋភាពនៃភ្ញៀវទេសចរមកលេងកម្សាន្តតាមរមណីយដ្ឋាន និងសហគមន៏ទេសចរណ៍នានា ក្នុងខេត្តកំពង់ស្ពឺ
+                    </h3>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+    <section class="container mx-auto py-16 px-6">
+        <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8 mt-10">
+
+            <!-- Card 1 -->
+            <div
+                class="bg-white dark:bg-gray-900 dark:text-white shadow-lg overflow-hidden hover:scale-105 transition duration-300 rounded-lg">
+
+                <img src="https://s9.kh1.co/54/546f319ca6c822b6be74501f4888378c250127b5.jpg"
+                    class="w-full h-72 object-cover rounded-b-lg" alt="Event">
+
+                <div class="p-5">
+                    <h3 class="text-xl font-bold mb-2">
+                      កោះរ៉ុង 
+                    </h3>
+                </div>
+
+            </div>
+
+            <!-- Card 2 -->
+            <div
+                class="bg-white dark:bg-gray-900 dark:text-white rounded-lg shadow-lg overflow-hidden hover:scale-105 transition duration-300">
+
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhcqe39wlD49dMs4x95eSIjvb1jWQEsQMe8uoXXnm7Qy6iK1zn49uMCqtCzanDdt1PbhJ72ODd6IydI11awsuvMy5c7cgrV-hUKIuwKceuX6l2g-hdDJYTT8lw
+                   wayfJv-_tgG9p-Sad6As/s640/1137.jpg"
+                    class="w-full h-72 object-cover rounded-2xl" alt="Event">
+
+                <div class="p-5">
+                    <h3 class="text-xl font-bold mb-2">
+                        ឆ្នេសមុទ្រ
+                    </h3>
+                </div>
+
+            </div>
+
+            <!-- Card 3 -->
+            <div
+                class="bg-white dark:bg-gray-900 dark:text-white rounded-lg shadow-lg overflow-hidden hover:scale-105 transition duration-300">
+
+                <img src="https://asset.cambodia.gov.kh/tourism/2023/11/Lr_52.jpeg"
+                    class="w-full h-72 object-cover rounded-b-lg" alt="Event">
+
+                <div class="p-5">
+                    <h3 class="text-xl font-bold mb-2">
+                       កោះកុងក្រៅ
+                    </h3>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+    <section class="container mx-auto py-16 px-6">
+        <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8 mt-10">
+
+            <!-- Card 1 -->
+            <div
+                class="bg-white dark:bg-gray-900 dark:text-white shadow-lg overflow-hidden hover:scale-105 transition duration-300 rounded-lg">
+
+                <img src="https://image.thmeythmey.com/pictures/2024/09/26/imgs1_.jpg"
+                    class="w-full h-72 object-cover rounded-b-lg" alt="Event">
+
+                <div class="p-5">
+                    <h3 class="text-xl font-bold mb-2">
+                      ភ្នំបូកគោ 
+                    </h3>
+                </div>
+
+            </div>
+
+            <!-- Card 2 -->
+            <div
+                class="bg-white dark:bg-gray-900 dark:text-white rounded-lg shadow-lg overflow-hidden hover:scale-105 transition duration-300">
+
+                <img src="https://asset.cambodia.gov.kh/tourism/2025/05/photo_2_2025-05-01_14-49-51.jpg"
+                    class="w-full h-72 object-cover rounded-2xl" alt="Event">
+
+                <div class="p-5">
+                    <h3 class="text-xl font-bold mb-2">
+                        ភ្នំឱរ៉ាល់
+                    </h3>
+                </div>
+
+            </div>
+
+            <!-- Card 3 -->
+            <div
+                class="bg-white dark:bg-gray-900 dark:text-white rounded-lg shadow-lg overflow-hidden hover:scale-105 transition duration-300">
+
+                <img src="https://i.ytimg.com/vi/OgmR2lUnaBk/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLDlXe47Rzo2XE7ekcu7Q45QXLr-jw"
+                    class="w-full h-72 object-cover rounded-b-lg" alt="Event">
+
+                <div class="p-5">
+                    <h3 class="text-xl font-bold mb-2">
+                       ភ្នំសំកុស
+                    </h3>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+    <!-- video -->
+    <div class="container mx-auto py-16 px-0">
+        <iframe class="mt-8"  autoplay  width="100%" height="500px"  src="https://www.youtube-nocookie.com/embed/fGrLyci6M4k?si=Umi6qCGfeNZmB0Aa" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen ></iframe>
+    </div>
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white container mx-auto mt-10 relative">
+
+        <!-- Main Footer Container -->
+        <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-12">
+
+            <!-- Logo Section -->
+            <div class="flex justify-center md:justify-start rounded-lg ">
+                <img src="https://asset.cambodia.gov.kh/tourism/2023/11/web-logo.png" alt="Logo"
+                    class="">
+            </div>
+
+            <!-- Information Section -->
+            <div>
+
+                <h3 class="text-2xl font-bold mb-6 text-yellow-400">
+                    ក្រសួងទេសចរណ៍
+                </h3>
+
+                <div class="space-y-5 text-gray-300">
+
+                    <!-- Address -->
+                    <div class="flex items-start gap-4">
+                        <i clas
+                      s="fa-solid fa-location-dot text-yellow-400 mt-1"></i>
+
+                        <span>
+                            ដីឡូត៍លេខ៣អា ផ្លូវលេខ១៦៩ សង្កាត់វាលវង់ ខណ្ឌ៧មករា
+                            រាជធានីភ្នំពេញ
+                        </span>
+                    </div>
+
+                    <!-- Phone -->
+                    <div class="flex items-start gap-4">
+                        <i class="fa-solid fa-phone text-yellow-400 mt-1"></i>
+
+                        <span>
+                            (+៨៥៥) ០២៣ ៨៨៤ ៩៧២ /
+                            (+៨៥៥) ០២៣ ៨៨៤ ៩៨៨
+                        </span>
+                    </div>
+
+                    <!-- Service -->
+                    <div class="flex items-start gap-4">
+                        <i class="fa-solid fa-envelope-open-text text-yellow-400 mt-1"></i>
+
+                        <span>
+                            ច្រកចេញចូលតែមួយ 1221
+                            (មិនគិតថ្លៃសេវាពីគ្រប់ប្រព័ន្ធ)
+                        </span>
+                    </div>
+
+                    <!-- Email 1 -->
+                    <div class="flex items-start gap-4">
+                        <i class="fa-solid fa-envelope text-yellow-400 mt-1"></i>
+
+                        <span>
+                            ព័ត៌មានទូទៅ (General Information):
+                            <a href="mailto:info@tourism.gov.kh" class="text-blue-400 hover:text-blue-300 duration-300">
+                                info@tourism.gov.kh
+                            </a>
+                        </span>
+                    </div>
+
+                    <!-- Email 2 -->
+                    <div class="flex items-start gap-4">
+                        <i class="fa-solid fa-envelope text-yellow-400 mt-1"></i>
+
+                        <span>
+                            ដោះស្រាយវិវាទ (Conflict Resolution):
+                            <a href="mailto:conflict@tourism.gov.kh"
+                                class="text-blue-400 hover:text-blue-300 duration-300">
+                                conflict@tourism.gov.kh
+                            </a>
+                        </span>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Social Section -->
+            <div class="text-center md:text-left">
+
+                <h3 class="text-2xl font-bold mb-6 text-yellow-400">
+                    បណ្តាញសង្គម
+                </h3>
+
+                <div class="flex flex-wrap justify-center md:justify-start gap-4">
+
+                    <a href="#"
+                        class="w-12 h-12 rounded-full bg-blue-600 flex items-center justify-center hover:scale-110 duration-300">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+
+                    <a href="#"
+                        class="w-12 h-12 rounded-full bg-pink-600 flex items-center justify-center hover:scale-110 duration-300">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+                    <a href="#"
+                        class="w-12 h-12 rounded-full bg-black flex items-center justify-center hover:scale-110 duration-300">
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </a>
+
+                    <a href="#"
+                        class="w-12 h-12 rounded-full bg-red-600 flex items-center justify-center hover:scale-110 duration-300">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+
+                    <a href="#"
+                        class="w-12 h-12 rounded-full bg-sky-500 flex items-center justify-center hover:scale-110 duration-300">
+                        <i class="fa-brands fa-telegram"></i>
+                    </a>
+
+                    <a href="#"
+                        class="w-12 h-12 rounded-full bg-gray-700 flex items-center justify-center hover:scale-110 duration-300">
+                        <i class="fa-brands fa-tiktok"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Divider -->
+        <div class="container mx-auto px-6">
+       <hr class="border-gray-700 my-8">
+        </div>
+
+        <!-- Copyright -->
+        <p class="text-center text-gray-400 text-sm">
+            &copy; ២០២៦ រក្សាសិទ្ធិដោយក្រសួងទេសចរណ៍
+        </p>
+
+        <!-- Back To Top Button -->
+        <button onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
+            class="fixed bottom-6 right-6 bg-yellow-400 hover:bg-yellow-300 text-black w-14 h-14 rounded-full shadow-2xl text-xl duration-300">
+
+            <i class="fa-solid fa-arrow-up"></i>
+
+        </button>
+
+    </footer>
+    <!-- Flowbite JS -->
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
+
+</body>
+<script>
+    const buttons = document.querySelectorAll(".buttonToggle"); // use class
+    const icons = document.querySelectorAll(".iconChange");
+
+    // Click event for ALL buttons
+    buttons.forEach(btn => {
+        btn.addEventListener("click", () => {
+
+            document.documentElement.classList.toggle("dark");
+
+            const isDark = document.documentElement.classList.contains("dark");
+
+            localStorage.theme = isDark ? "dark" : "light";
+
+            icons.forEach(icon => {
+                icon.classList.toggle("fa-moon", !isDark);
+                icon.classList.toggle("fa-sun", isDark);
+            });
+        });
+    });
+
+    // Load saved theme on page start
+    if (localStorage.theme === "dark") {
+        document.documentElement.classList.add("dark");
+
+        icons.forEach(icon => {
+            icon.classList.remove("fa-moon");
+            icon.classList.add("fa-sun");
+        });
+    }
+</script>
+
+</html>   
