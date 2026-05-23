@@ -7,6 +7,13 @@
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+     <script>
+        tailwind.config = {
+            darkMode: 'class'
+        }
+    </script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
     <!-- Font Awesome -->
     <link
@@ -31,10 +38,11 @@
     </style>
   </head>
 
-  <body class="bg-gray-50 text-gray-800">
+  <body class="bg-gray-50 text-gray-800 dark:bg-gray-900 dark:text-gray-200">
 
-        <!-- Top Header -->
-    <div class="bg-white py-2 px-4 flex justify-end items-center gap-4 text-sm text-gray-600">
+    <!-- Top Header -->
+    <div
+        class="bg-white dark:bg-gray-900 dark:text-white py-2 px-4 flex justify-end items-center gap-4 text-sm text-gray-600">
         <a href="#" class="hover:text-blue-600">Facebook</a>
         <a href="#" class="hover:text-pink-600">Instagram</a>
         <a href="#" class="hover:text-sky-500">Telegram</a>
@@ -42,28 +50,60 @@
     </div>
 
     <!-- Main Navbar -->
-    <header class="sticky top-0 z-50 bg-white shadow-md">
-        <div class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
+    <header class="sticky top-0 z-50 bg-white shadow-md dark:bg-gray-900  dark:text-white">
+        <div class="max-w-7xl mx-auto flex items-center justify-between px-5 py-3">
 
             <div class="flex items-center gap-4">
                 <img src="https://asset.cambodia.gov.kh/tourism/2023/11/web-logo.png" alt="logo" class="h-16" />
 
                 <div>
-                    <h1 class="text-2xl font-bold text-sky-800">ក្រសួងទេសចរណ៍</h1>
+                    <h1 class="text-2xl font-bold text-blue-500">ក្រសួងទេសចរណ៍</h1>
                     <p class="text-sm uppercase tracking-widest text-gray-500">
                         Ministry of Tourism
                     </p>
                 </div>
             </div>
-
-            <nav class="hidden lg:flex items-center gap-6 font-medium text-gray-700">
+            <nav class="hidden lg:flex ml-auto items-center gap-6 font-medium dark:text-white  text-gray-700">
                 <a href="index.html" class="hover:text-blue-600">ទំព័រដើម</a>
                 <a href="starbent.html" class="hover:text-blue-600">អំពីស្ថាប័ន</a>
                 <a href="pritka.html" class="hover:text-blue-600">សេចក្តីថ្លែងការណ៍</a>
                 <a href="jbabKolyoubay.html" class="hover:text-blue-600">ច្បាប់និងគោលនយោបាយ</a>
                 <a href="komnothet.html" class="hover:text-blue-600">កំណត់ហេតុ</a>
                 <a href="sewakam.html" class="hover:text-blue-600">សេវាកម្ម</a>
+
             </nav>
+             <div class="ml-auto flex items-center  gap-4 dark:bg-gray-600 bg-gray-50 rounded-full p-1 px-3 mr-3">
+                <button class="buttonToggle"><i class="fa-solid fa-moon iconChange"></i></button>
+            </div>
+            
+            <div class="relative inline-block lg:hidden bg-gray-50 dark:bg-gray-600 rounded-full mr-12  text-left">
+                <div class="group">
+                    <button type="button"
+                        class="inline-flex justify-center items-center w-full px-4 py-2 text-sm font-medium text-black dark:bg-gray-400  hover:bg-gray-100 rounded-full focus:outline-none focus:bg-gray-700">
+                         <i class="fa-solid fa-bars"></i>
+                        <!-- Dropdown arrow -->
+                        <svg class="w-4 h-4 ml-2 -mr-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+                            fill="currentColor">
+                            <path fill-rule="evenodd" d="M10 12l-5-5h10l-5 5z" />
+                        </svg>
+                    </button>
+
+                    <!-- Dropdown menu -->
+                    <div
+                        class="absolute left-0 w-40  origin-top-left bg-white divide-y divide-gray-100 rounded-md shadow-lg opacity-0  group-hover:opacity-100 group-hover:visible transition duration-300">
+                        <div class="py-1">
+                            <a href="index.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">ទំព័រដើម</a>
+                            <a href="starbent.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">អំពីស្ថាប័ន</a>
+                            <a href="pritka.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">សេចក្តីថ្លែងការណ៍</a>
+                            <a href="jbabKolyoubay.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">ច្បាប់និងគោលនយោបាយ</a>
+                            <a href="komnothet.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">កំណត់ហេតុ</a>
+                            <a href="sewakam.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">សេវាកម្ម</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+           
+
 
             <img src="https://asset.cambodia.gov.kh/tourism/2023/11/IMG_3436-300x250.png" alt="kingdom"
                 class="hidden lg:block h-12" />
@@ -71,7 +111,7 @@
     </header>
 
     <!-- Header -->
-    <section class="bg-white py-14 px-5 text-center">
+    <section class="bg-white dark:bg-gray-900 dark:text-white py-14 px-5 text-center">
       <h1 class="text-4xl md:text-5xl font-bold text-blue-900 mb-4">
         សេវាសាធារណៈរបស់ក្រសួង
       </h1>
@@ -83,12 +123,12 @@
     </section>
 
     <!-- Services -->
-    <section class="max-w-7xl mx-auto px-5 py-14">
+    <section class="max-w-7xl dark:bg-gray-900 dark:text-white mx-auto px-5 py-14">
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-7">
 
         <!-- Card 1 -->
         <div
-          class="bg-white rounded-2xl p-8 text-center shadow-lg hover:-translate-y-3 hover:shadow-2xl transition duration-300 border-b-4 border-transparent hover:border-yellow-400"
+          class="bg-white dark:bg-gray-900 rounded-2xl p-8 text-center shadow-lg hover:-translate-y-3 hover:shadow-2xl transition duration-300 border-b-4 border-transparent hover:border-blue-900"
         >
           <div
             class="w-20 h-20 mx-auto mb-5 rounded-full bg-blue-100 text-blue-900 flex items-center justify-center text-3xl hover:bg-blue-900 hover:text-white transition"
@@ -115,7 +155,7 @@
 
         <!-- Card 2 -->
         <div
-          class="bg-white rounded-2xl p-8 text-center shadow-lg hover:-translate-y-3 hover:shadow-2xl transition duration-300 border-b-4 border-transparent hover:border-yellow-400"
+          class="bg-white dark:bg-gray-900 rounded-2xl p-8 text-center shadow-lg hover:-translate-y-3 hover:shadow-2xl transition duration-300 border-b-4 border-transparent hover:border-blue-900"
         >
           <div
             class="w-20 h-20 mx-auto mb-5 rounded-full bg-blue-100 text-blue-900 flex items-center justify-center text-3xl"
@@ -142,7 +182,7 @@
 
         <!-- Card 3 -->
         <div
-          class="bg-white rounded-2xl p-8 text-center shadow-lg hover:-translate-y-3 hover:shadow-2xl transition duration-300 border-b-4 border-transparent hover:border-yellow-400"
+          class="bg-white dark:bg-gray-900 rounded-2xl p-8 text-center shadow-lg hover:-translate-y-3 hover:shadow-2xl transition duration-300 border-b-4 border-transparent hover:border-blue-900"
         >
           <div
             class="w-20 h-20 mx-auto mb-5 rounded-full bg-blue-100 text-blue-900 flex items-center justify-center text-3xl"
@@ -168,7 +208,7 @@
 
         <!-- Card 4 -->
         <div
-          class="bg-white rounded-2xl p-8 text-center shadow-lg hover:-translate-y-3 hover:shadow-2xl transition duration-300 border-b-4 border-transparent hover:border-yellow-400"
+          class="bg-white dark:bg-gray-900 rounded-2xl p-8 text-center shadow-lg hover:-translate-y-3 hover:shadow-2xl transition duration-300 border-b-4 border-transparent hover:border-blue-900"
         >
           <div
             class="w-20 h-20 mx-auto mb-5 rounded-full bg-blue-100 text-blue-900 flex items-center justify-center text-3xl"
@@ -197,114 +237,147 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-[#313074] text-white py-14 px-6 md:px-20 relative">
+    <footer class="bg-blue-950 text-white container mx-auto mt-10 relative">
 
-      <div class="flex flex-col lg:flex-row justify-between gap-10">
+        <!-- Main Footer Container -->
+        <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-12">
 
-        <!-- Logo -->
-        <div>
-          <img
-            src="https://asset.cambodia.gov.kh/tourism/2023/11/web-logo.png"
-            alt="logo"
-            class="w-28"
-          />
+            <!-- Logo Section -->
+            <div class="flex justify-center md:justify-start">
+                <img src="https://asset.cambodia.gov.kh/tourism/2023/11/web-logo.png" alt="Logo"
+                    class=" object-contain">
+            </div>
+
+            <!-- Information Section -->
+            <div>
+
+                <h3 class="text-2xl font-bold mb-6 text-yellow-400">
+                    ក្រសួងទេសចរណ៍
+                </h3>
+
+                <div class="space-y-5 text-gray-300">
+
+                    <!-- Address -->
+                    <div class="flex items-start gap-4">
+                        <i class="fa-solid fa-location-dot text-yellow-400 mt-1"></i>
+
+                        <span>
+                            ដីឡូត៍លេខ៣អា ផ្លូវលេខ១៦៩ សង្កាត់វាលវង់ ខណ្ឌ៧មករា
+                            រាជធានីភ្នំពេញ
+                        </span>
+                    </div>
+
+                    <!-- Phone -->
+                    <div class="flex items-start gap-4">
+                        <i class="fa-solid fa-phone text-yellow-400 mt-1"></i>
+
+                        <span>
+                            (+៨៥៥) ០២៣ ៨៨៤ ៩៧២ /
+                            (+៨៥៥) ០២៣ ៨៨៤ ៩៨៨
+                        </span>
+                    </div>
+
+                    <!-- Service -->
+                    <div class="flex items-start gap-4">
+                        <i class="fa-solid fa-envelope-open-text text-yellow-400 mt-1"></i>
+
+                        <span>
+                            ច្រកចេញចូលតែមួយ 1221
+                            (មិនគិតថ្លៃសេវាពីគ្រប់ប្រព័ន្ធ)
+                        </span>
+                    </div>
+
+                    <!-- Email 1 -->
+                    <div class="flex items-start gap-4">
+                        <i class="fa-solid fa-envelope text-yellow-400 mt-1"></i>
+
+                        <span>
+                            ព័ត៌មានទូទៅ (General Information):
+                            <a href="mailto:info@tourism.gov.kh" class="text-blue-400 hover:text-blue-300 duration-300">
+                                info@tourism.gov.kh
+                            </a>
+                        </span>
+                    </div>
+
+                    <!-- Email 2 -->
+                    <div class="flex items-start gap-4">
+                        <i class="fa-solid fa-envelope text-yellow-400 mt-1"></i>
+
+                        <span>
+                            ដោះស្រាយវិវាទ (Conflict Resolution):
+                            <a href="mailto:conflict@tourism.gov.kh"
+                                class="text-blue-400 hover:text-blue-300 duration-300">
+                                conflict@tourism.gov.kh
+                            </a>
+                        </span>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Social Section -->
+            <div class="text-center md:text-left">
+
+                <h3 class="text-2xl font-bold mb-6 text-yellow-400">
+                    បណ្តាញសង្គម
+                </h3>
+
+                <div class="flex flex-wrap justify-center md:justify-start gap-4">
+
+                    <a href="#"
+                        class="w-12 h-12 rounded-full bg-blue-600 flex items-center justify-center hover:scale-110 duration-300">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+
+                    <a href="#"
+                        class="w-12 h-12 rounded-full bg-pink-600 flex items-center justify-center hover:scale-110 duration-300">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+                    <a href="#"
+                        class="w-12 h-12 rounded-full bg-black flex items-center justify-center hover:scale-110 duration-300">
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </a>
+
+                    <a href="#"
+                        class="w-12 h-12 rounded-full bg-red-600 flex items-center justify-center hover:scale-110 duration-300">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+
+                    <a href="#"
+                        class="w-12 h-12 rounded-full bg-sky-500 flex items-center justify-center hover:scale-110 duration-300">
+                        <i class="fa-brands fa-telegram"></i>
+                    </a>
+
+                    <a href="#"
+                        class="w-12 h-12 rounded-full bg-gray-700 flex items-center justify-center hover:scale-110 duration-300">
+                        <i class="fa-brands fa-tiktok"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
         </div>
 
-        <!-- Info -->
-        <div class="flex-1">
-          <h3 class="text-2xl font-bold mb-5">
-            ក្រសួងទេសចរណ៍
-          </h3>
-
-          <div class="space-y-4 text-sm">
-
-            <div class="flex items-start gap-4">
-              <i class="fa-solid fa-location-dot mt-1"></i>
-              <span>
-                ដីឡូត៍លេខ៣អា ផ្លូវលេខ១៦៩ សង្កាត់វាលវង់ ខណ្ឌ៧មករា
-                រាជធានីភ្នំពេញ
-              </span>
-            </div>
-
-            <div class="flex items-center gap-4">
-              <i class="fa-solid fa-phone"></i>
-              <span>(+៨៥៥) ០២៣ ៨៨៤ ៩៧២ / ០២៣ ៨៨៤ ៩៨៨</span>
-            </div>
-
-            <div class="flex items-center gap-4">
-              <i class="fa-solid fa-envelope-open-text"></i>
-              <span>ច្រកចេញចូលតែមួយ 1221</span>
-            </div>
-
-            <div class="flex items-center gap-4">
-              <i class="fa-solid fa-envelope"></i>
-              <a href="mailto:info@tourism.gov.kh" class="hover:underline">
-                info@tourism.gov.kh
-              </a>
-            </div>
-
-            <div class="flex items-center gap-4">
-              <i class="fa-solid fa-envelope"></i>
-              <a href="mailto:conflict@tourism.gov.kh" class="hover:underline">
-                conflict@tourism.gov.kh
-              </a>
-            </div>
-
-          </div>
+        <!-- Divider -->
+        <div class="container mx-auto px-6">
+            <hr class="border-gray-700 my-8">
         </div>
 
-        <!-- Social -->
-        <div>
-          <h3 class="text-xl font-bold mb-5">
-            បណ្តាញសង្គម
-          </h3>
+        <!-- Copyright -->
+        <p class="text-center text-gray-400 text-sm">
+            &copy; ២០២៦ រក្សាសិទ្ធិដោយក្រសួងទេសចរណ៍
+        </p>
 
-          <div class="flex gap-3">
+        <!-- Back To Top Button -->
+        <button onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
+            class="fixed bottom-6 right-6 bg-yellow-400 hover:bg-yellow-300 text-black w-14 h-14 rounded-full shadow-2xl text-xl duration-300">
 
-            <a
-              href="#"
-              class="w-10 h-10 border border-white rounded flex items-center justify-center hover:bg-white hover:text-[#313074] transition"
-            >
-              <i class="fa-brands fa-facebook-f"></i>
-            </a>
+            <i class="fa-solid fa-arrow-up"></i>
 
-            <a
-              href="#"
-              class="w-10 h-10 border border-white rounded flex items-center justify-center hover:bg-white hover:text-[#313074] transition"
-            >
-              <i class="fa-brands fa-instagram"></i>
-            </a>
-
-            <a
-              href="#"
-              class="w-10 h-10 border border-white rounded flex items-center justify-center hover:bg-white hover:text-[#313074] transition"
-            >
-              <i class="fa-brands fa-youtube"></i>
-            </a>
- <a
-              href="#"
-              class="w-10 h-10 border border-white rounded flex items-center justify-center hover:bg-white hover:text-[#313074] transition"
-            >
-              <i class="fa-brands fa-telegram"></i>
-            </a>
-
-          </div>
-        </div>
-
-      </div>
-
-      <!-- Divider -->
-      <div class="border-t border-white/20 mt-10 pt-6 text-center text-sm">
-        &copy; ២០២៦ រក្សាសិទ្ធិដោយក្រសួងទេសចរណ៍
-      </div>
-
-      <!-- Back To Top -->
-      <button
-        onclick="topFunction()"
-        class="absolute bottom-5 right-5 text-2xl hover:opacity-70 transition"
-      >
-        <i class="fa-solid fa-arrow-up"></i>
-      </button>
+        </button>
 
     </footer>
 
@@ -316,4 +389,36 @@
     </script>
 
   </body>
+  <script>
+    const buttons = document.querySelectorAll(".buttonToggle"); // use class
+    const icons = document.querySelectorAll(".iconChange");
+
+    // Click event for ALL buttons
+    buttons.forEach(btn => {
+        btn.addEventListener("click", () => {
+
+            document.documentElement.classList.toggle("dark");
+
+            const isDark = document.documentElement.classList.contains("dark");
+
+            localStorage.theme = isDark ? "dark" : "light";
+
+            icons.forEach(icon => {
+                icon.classList.toggle("fa-moon", !isDark);
+                icon.classList.toggle("fa-sun", isDark);
+            });
+        });
+    });
+
+    // Load saved theme on page start
+    if (localStorage.theme === "dark") {
+        document.documentElement.classList.add("dark");
+
+        icons.forEach(icon => {
+            icon.classList.remove("fa-moon");
+            icon.classList.add("fa-sun");
+        });
+    }
+</script>
+
 </html>

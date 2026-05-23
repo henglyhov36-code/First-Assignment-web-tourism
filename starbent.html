@@ -23,8 +23,9 @@
 
 <body class=" font-sans dark:bg-gray-900 bg-white">
 
-        <!-- Top Header -->
-    <div class="bg-white py-2 px-4 flex justify-end items-center gap-4 text-sm text-gray-600">
+    <!-- Top Header -->
+    <div
+        class="bg-white dark:bg-gray-900 dark:text-white py-2 px-4 flex justify-end items-center gap-4 text-sm text-gray-600">
         <a href="#" class="hover:text-blue-600">Facebook</a>
         <a href="#" class="hover:text-pink-600">Instagram</a>
         <a href="#" class="hover:text-sky-500">Telegram</a>
@@ -32,68 +33,137 @@
     </div>
 
     <!-- Main Navbar -->
-    <header class="sticky top-0 z-50 bg-white shadow-md">
-        <div class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
+    <header class="sticky top-0 z-50 bg-white shadow-md dark:bg-gray-900  dark:text-white">
+        <div class="max-w-7xl mx-auto flex items-center justify-between px-5 py-3">
 
             <div class="flex items-center gap-4">
                 <img src="https://asset.cambodia.gov.kh/tourism/2023/11/web-logo.png" alt="logo" class="h-16" />
 
                 <div>
-                    <h1 class="text-2xl font-bold text-sky-800">ក្រសួងទេសចរណ៍</h1>
+                    <h1 class="text-2xl font-bold text-blue-500">ក្រសួងទេសចរណ៍</h1>
                     <p class="text-sm uppercase tracking-widest text-gray-500">
                         Ministry of Tourism
                     </p>
                 </div>
             </div>
-
-            <nav class="hidden lg:flex items-center gap-6 font-medium text-gray-700">
+            <nav class="hidden lg:flex ml-auto items-center gap-6 font-medium dark:text-white  text-gray-700">
                 <a href="index.html" class="hover:text-blue-600">ទំព័រដើម</a>
                 <a href="starbent.html" class="hover:text-blue-600">អំពីស្ថាប័ន</a>
                 <a href="pritka.html" class="hover:text-blue-600">សេចក្តីថ្លែងការណ៍</a>
                 <a href="jbabKolyoubay.html" class="hover:text-blue-600">ច្បាប់និងគោលនយោបាយ</a>
                 <a href="komnothet.html" class="hover:text-blue-600">កំណត់ហេតុ</a>
                 <a href="sewakam.html" class="hover:text-blue-600">សេវាកម្ម</a>
+
             </nav>
+            <div class="ml-auto flex items-center  gap-4 dark:bg-gray-600 bg-gray-50 rounded-full p-1 px-3 mr-3">
+                <button class="buttonToggle"><i class="fa-solid fa-moon iconChange"></i></button>
+            </div>
+
+            <div class="relative inline-block lg:hidden bg-gray-50 dark:bg-gray-600 rounded-full mr-12  text-left">
+                <div class="group">
+                    <button type="button"
+                        class="inline-flex justify-center items-center w-full px-4 py-2 text-sm font-medium text-black dark:bg-gray-400  hover:bg-gray-100 rounded-full focus:outline-none focus:bg-gray-700">
+                        <i class="fa-solid fa-bars"></i>
+                        <!-- Dropdown arrow -->
+                        <svg class="w-4 h-4 ml-2 -mr-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+                            fill="currentColor">
+                            <path fill-rule="evenodd" d="M10 12l-5-5h10l-5 5z" />
+                        </svg>
+                    </button>
+
+                    <!-- Dropdown menu -->
+                    <div
+                        class="absolute left-0 w-40  origin-top-left bg-white divide-y divide-gray-100 rounded-md shadow-lg opacity-0  group-hover:opacity-100 group-hover:visible transition duration-300">
+                        <div class="py-1">
+                            <a href="index.html"
+                                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">ទំព័រដើម</a>
+                            <a href="starbent.html"
+                                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">អំពីស្ថាប័ន</a>
+                            <a href="pritka.html"
+                                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">សេចក្តីថ្លែងការណ៍</a>
+                            <a href="jbabKolyoubay.html"
+                                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">ច្បាប់និងគោលនយោបាយ</a>
+                            <a href="komnothet.html"
+                                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">កំណត់ហេតុ</a>
+                            <a href="sewakam.html"
+                                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">សេវាកម្ម</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
 
             <img src="https://asset.cambodia.gov.kh/tourism/2023/11/IMG_3436-300x250.png" alt="kingdom"
                 class="hidden lg:block h-12" />
         </div>
     </header>
 
-    <!-- Navbar -->
-    <nav class="bg-blue-600 dark:bg-gray-900 sticky top-0 z-30 text-white shadow-lg">
-        <div class="container mx-auto flex flex-wrap items-center p-4 gap-4">
-            <div>
-                <img src="https://asset.cambodia.gov.kh/tourism/2023/11/web-logo.png" alt="Logo" class="w-12 h-12 object-contain">
+    <!-- carousel  -->
+    <div id="default-carousel" class="relative w-full" data-carousel="slide">
+        <!-- Carousel wrapper -->
+        <div class="relative h-56 overflow-hidden rounded-base md:w-6 md:h-96">
+            <!-- Item 1 -->
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                <img src="https://avytravel.com/wp-content/uploads/2025/09/Blog-Post-1200-x-675.png"
+                    class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
             </div>
-            <h1 class="text-2xl font-bold ">
-                Tourism Cambodia
-            </h1>
-            <div class="flex ml-auto">
-                <button class="buttonToggle"><i class="fa-solid fa-moon iconChange"></i></button>
+            <!-- Item 2 -->
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                <img src="https://www.vietnamairlines.com/content/dam/legacy-site-assets/SEO-images/2025%20SEO/Traffic%20TV/san-bay-quoc-te-phnom-penh/san-bay-techo-du-kien-se-chinh-thuc-di-vao-hoat-dong-tu-ngay-09092025.jpg"
+                    class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
             </div>
+            <!-- Item 3 -->
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                <img src="https://www.vietnamairlines.com/content/dam/legacy-site-assets/SEO-images/2025%20SEO/Traffic%20TV/san-bay-quoc-te-phnom-penh/san-bay-quoc-te-phnom-penh.jpg?width=1920"
+                    class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+            </div>
+            <!-- Item 4 -->
+
+        </div>
+        <!-- Slider indicators -->
+        <div class="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse">
+            <button type="button" class="w-3 h-3 rounded-base" aria-current="true" aria-label="Slide 1"
+                data-carousel-slide-to="0"></button>
+            <button type="button" class="w-3 h-3 rounded-base" aria-current="false" aria-label="Slide 2"
+                data-carousel-slide-to="1"></button>
+            <button type="button" class="w-3 h-3 rounded-base" aria-current="false" aria-label="Slide 3"
+                data-carousel-slide-to="2"></button>
             
         </div>
-    </nav>
+        <!-- Slider controls -->
+        <button type="button"
+            class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+            data-carousel-prev>
+            <span
+                class="inline-flex items-center justify-center w-10 h-10 rounded-base bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                <svg class="w-5 h-5 text-white rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                    width="24" height="24" fill="none" viewBox="0 0 24 24">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="m15 19-7-7 7-7" />
+                </svg>
+                <span class="sr-only">Previous</span>
+            </span>
+        </button>
+        <button type="button"
+            class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+            data-carousel-next>
+            <span
+                class="inline-flex items-center justify-center w-10 h-10 rounded-base bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                <svg class="w-5 h-5 text-white rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                    width="24" height="24" fill="none" viewBox="0 0 24 24">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="m9 5 7 7-7 7" />
+                </svg>
+                <span class="sr-only">Next</span>
+            </span>
+        </button>
+    </div>
 
-    <!-- Hero Section -->
-    <section class="relative">
-        <img src="https://i.pinimg.com/1200x/ec/33/10/ec3310c76c0b0de89d3a0980d0858f62.jpg" alt="Tourism"
-            class="w-full h-[500px] object-cover">
-
-        <div class="absolute inset-0 bg-black/50 flex items-center justify-center">
-            <div class="text-center text-white px-4">
-                <h2 class="text-5xl font-bold mb-4">Airport Cambodia</h2>
-                <p class="text-xl mb-6">
-                    
-                </p>
-            </div>
-        </div>
-    </section>
 
     <!-- Tourism Places -->
     <section class="container mx-auto py-16 px-6">
-        <h2 class="text-4xl font-bold text-center mb-10 text-blue-700">
+        <h2 class="text-4xl font-bold text-center mt-5 mb-10 text-blue-700">
             របាយការណ៍អំពីស្ថាប័ន
         </h2>
 
@@ -121,7 +191,7 @@
     </section>
     <div>
         <p class="mx-auto py-6 text-amber-50 dark:text-white "><span
-                class="text-orange-700">អាកាសយានដ្ឋានអន្តរជាតិតេជោ</span> (Techo International
+                class="text-red-500">អាកាសយានដ្ឋានអន្តរជាតិតេជោ</span> (Techo International
             Airport) គឺជាគម្រោងហេដ្ឋារចនាសម្ព័ន្ធដ៏ធំបំផុតមួយរបស់កម្ពុជា
             ដែលបានប្រកាសបើកដំណើរការជាផ្លូវការនៅថ្ងៃទី ៩ ខែកញ្ញា ឆ្នាំ២០២៥ និងសម្ពោធជាផ្លូវការនៅថ្ងៃទី ២០ ខែតុលា
             ឆ្នាំ២០២៥។
@@ -175,7 +245,7 @@
                     <img src="https://i.pinimg.com/736x/34/89/b2/3489b26b848a8fd05b6784d49b7de8c0.jpg"
                         class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
                 </div>
-                
+
             </div>
             <!-- Slider indicators -->
             <div class="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse">
@@ -281,7 +351,7 @@
                             ច្រកចេញចូលតែមួយ 1221
                             (មិនគិតថ្លៃសេវាពីគ្រប់ប្រព័ន្ធ)
                         </span>
-                  </div>
+                    </div>
 
                     <!-- Email 1 -->
                     <div class="flex items-start gap-4">
@@ -376,10 +446,10 @@
         </button>
 
     </footer>
-     <!-- Flowbite JS -->
+    <!-- Flowbite JS -->
     <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
 
-    
+
 
 </body>
 <script>

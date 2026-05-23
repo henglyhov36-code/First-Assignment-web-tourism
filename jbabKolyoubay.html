@@ -7,14 +7,23 @@
 
     <!-- Tailwind -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class'
+        }
+    </script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
 
     <title>TIA Policy</title>
 </head>
 
-<body class="bg-gray-100 font-sans">
+<body class="font-sans bg-white text-black dark:bg-gray-900 dark:text-white transition-all duration-300">
 
-        <!-- Top Header -->
-    <div class="bg-white py-2 px-4 flex justify-end items-center gap-4 text-sm text-gray-600">
+    <!-- Top Header -->
+    <div
+        class="bg-white dark:bg-gray-900 dark:text-white py-2 px-4 flex justify-end items-center gap-4 text-sm text-gray-600">
         <a href="#" class="hover:text-blue-600">Facebook</a>
         <a href="#" class="hover:text-pink-600">Instagram</a>
         <a href="#" class="hover:text-sky-500">Telegram</a>
@@ -22,35 +31,67 @@
     </div>
 
     <!-- Main Navbar -->
-    <header class="sticky top-0 z-50 bg-white shadow-md">
-        <div class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
+    <header class="sticky top-0 z-50 bg-white shadow-md dark:bg-gray-900  dark:text-white">
+        <div class="max-w-7xl mx-auto flex items-center justify-between px-5 py-3">
 
             <div class="flex items-center gap-4">
                 <img src="https://asset.cambodia.gov.kh/tourism/2023/11/web-logo.png" alt="logo" class="h-16" />
 
                 <div>
-                    <h1 class="text-2xl font-bold text-sky-800">ក្រសួងទេសចរណ៍</h1>
+                    <h1 class="text-2xl font-bold text-blue-500">ក្រសួងទេសចរណ៍</h1>
                     <p class="text-sm uppercase tracking-widest text-gray-500">
                         Ministry of Tourism
                     </p>
                 </div>
             </div>
-
-            <nav class="hidden lg:flex items-center gap-6 font-medium text-gray-700">
+            <nav class="hidden lg:flex ml-auto items-center gap-6 font-medium dark:text-white  text-gray-700">
                 <a href="index.html" class="hover:text-blue-600">ទំព័រដើម</a>
                 <a href="starbent.html" class="hover:text-blue-600">អំពីស្ថាប័ន</a>
                 <a href="pritka.html" class="hover:text-blue-600">សេចក្តីថ្លែងការណ៍</a>
                 <a href="jbabKolyoubay.html" class="hover:text-blue-600">ច្បាប់និងគោលនយោបាយ</a>
                 <a href="komnothet.html" class="hover:text-blue-600">កំណត់ហេតុ</a>
                 <a href="sewakam.html" class="hover:text-blue-600">សេវាកម្ម</a>
+
             </nav>
+             <div class="ml-auto flex items-center  gap-4 dark:bg-gray-600 bg-gray-50 rounded-full p-1 px-3 mr-3">
+                <button class="buttonToggle"><i class="fa-solid fa-moon iconChange"></i></button>
+            </div>
+            
+            <div class="relative inline-block lg:hidden bg-gray-50 dark:bg-gray-600 rounded-full mr-12  text-left">
+                <div class="group">
+                    <button type="button"
+                        class="inline-flex justify-center items-center w-full px-4 py-2 text-sm font-medium text-black dark:bg-gray-400  hover:bg-gray-100 rounded-full focus:outline-none focus:bg-gray-700">
+                         <i class="fa-solid fa-bars"></i>
+                        <!-- Dropdown arrow -->
+                        <svg class="w-4 h-4 ml-2 -mr-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+                            fill="currentColor">
+                            <path fill-rule="evenodd" d="M10 12l-5-5h10l-5 5z" />
+                        </svg>
+                    </button>
+
+                    <!-- Dropdown menu -->
+                    <div
+                        class="absolute left-0 w-40  origin-top-left bg-white divide-y divide-gray-100 rounded-md shadow-lg opacity-0  group-hover:opacity-100 group-hover:visible transition duration-300">
+                        <div class="py-1">
+                            <a href="index.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">ទំព័រដើម</a>
+                            <a href="starbent.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">អំពីស្ថាប័ន</a>
+                            <a href="pritka.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">សេចក្តីថ្លែងការណ៍</a>
+                            <a href="jbabKolyoubay.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">ច្បាប់និងគោលនយោបាយ</a>
+                            <a href="komnothet.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">កំណត់ហេតុ</a>
+                            <a href="sewakam.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">សេវាកម្ម</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+           
+
 
             <img src="https://asset.cambodia.gov.kh/tourism/2023/11/IMG_3436-300x250.png" alt="kingdom"
                 class="hidden lg:block h-12" />
         </div>
     </header>
 
-    <div class="max-w-6xl mx-auto bg-white shadow-xl rounded-2xl p-8 mt-10 mb-10">
+    <div class="max-w-6xl mx-auto dark:bg-gray-900 dark:text-white bg-white shadow-xl rounded-2xl p-8 mt-10 mb-10">
 
         <!-- Title -->
         <h1 class="text-center text-4xl font-bold text-purple-700 mb-8">
@@ -58,10 +99,10 @@
         </h1>
 
         <!-- Intro -->
-        <p class="text-gray-700 leading-8 text-justify mb-6">
+        <p class="text-gray-700 dark:text-white leading-8 text-justify mb-6">
             <span class="text-purple-700 font-bold">
                 អាកាសយានដ្ឋានអន្តរជាតិតេជោ (TIA)
-            </span>
+            </span ">
             ដែលនឹងសម្ពោធនៅខែតុលា ឆ្នាំ២០២៥ គឺជាគម្រោងយុទ្ធសាស្ត្រជាតិកម្រិត 4F
             តម្លៃជាង ១.៥ ពាន់លានដុល្លារ ស្ថិតនៅខេត្តកណ្តាល/តាកែវ។
             គោលនយោបាយគន្លឹះរួមមាន៖
@@ -73,28 +114,28 @@
         </p>
 
         <!-- Heading -->
-        <h2 class="text-center text-2xl font-bold underline italic mb-8">
+        <h2 class="text-center dark:text-white text-2xl font-bold underline italic mb-8">
             >>> គោលនយោបាយ និងច្បាប់សំខាន់ៗ
         </h2>
 
         <!-- Image -->
         <div class="flex justify-center mb-10">
-            <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/"
+            <img src="https://huunghivietnamcampuchia.thoidai.com.vn/stores/news_dataimages/sonhai/122023/08/17/in_article/YY-Y-YYY-YYYY-YY-Y-Y-Y-Y-Y-Y-YYYY-YYY-Y-Y-Y-Y-Y-Y-Y-Y-YY-YYY-Y-Y-Y-YYY-Y-YYYY-Y-YYY-YYY-Y-YY-Y-Y-YY-YY-Y-YY-Y.jpg?rt=20231208174208"
                 class="rounded-2xl shadow-lg w-full max-w-4xl">
         </div>
 
         <!-- Section 1 -->
         <div class="space-y-5">
 
-            <h3 class="text-2xl font-bold text-black">
+            <h3 class="text-2xl font-bold dark:text-white text-black">
                 ១. គោលនយោបាយ "បើកចំហជើងមេឃ" (Open Sky Policy)
             </h3>
 
-            <p class="text-gray-700 leading-8">
+            <p class="text-gray-700 dark:text-white leading-8">
                 រាជរដ្ឋាភិបាលកម្ពុជាអនុវត្តគោលនយោបាយនេះ ដើម្បី៖
             </p>
 
-            <p class="text-gray-700 leading-8">
+            <p class="text-gray-700 dark:text-white leading-8">
                 <span class="font-bold text-purple-700">
                     👮 ពង្រីកការតភ្ជាប់៖
                 </span>
@@ -102,7 +143,7 @@
                 និងសកលលោកឱ្យកាន់តែទូលំទូលាយ។
             </p>
 
-            <p class="text-gray-700 leading-8">
+            <p class="text-gray-700 dark:text-white leading-8">
                 <span class="font-bold text-purple-700">
                     👮 ទាក់ទាញការវិនិយោគ៖
                 </span>
@@ -110,7 +151,7 @@
                 ធុរកិច្ច និងពង្រឹងទំនាក់ទំនងការទូត។
             </p>
 
-            <p class="text-gray-700 leading-8">
+            <p class="text-gray-700 dark:text-white leading-8">
                 <span class="font-bold text-purple-700">
                     👮 ជំរុញទេសចរណ៍៖
                 </span>
@@ -127,7 +168,7 @@
                 ២. ការគ្រប់គ្រង និងប្រតិបត្តិការ
             </h3>
 
-            <p class="text-gray-700 leading-8">
+            <p class="text-gray-700 dark:text-white leading-8">
                 <span class="font-bold text-purple-700">
                     👮 ការគ្រប់គ្រងសេវាកម្ម៖
                 </span>
@@ -136,7 +177,7 @@
                 ដោយសារបទពិសោធន៍យូរឆ្នាំក្នុងវិស័យនេះ។
             </p>
 
-            <p class="text-gray-700 leading-8">
+            <p class="text-gray-700 dark:text-white leading-8">
                 <span class="font-bold text-purple-700">
                     👮 សមត្ថភាពបច្ចេកទេស៖
                 </span>
@@ -153,7 +194,7 @@
             <h3 class="text-2xl font-bold">
                 ៣. ចក្ខុវិស័យយុទ្ធសាស្ត្រ និងស្ថានភាពផ្លូវច្បាប់
             </h3>
-         <p class="text-gray-700 leading-8">
+            <p class="text-gray-700 dark:text-white leading-8">
                 <span class="font-bold text-purple-700">
                     👮 ការជំនួសតួនាទី៖
                 </span>
@@ -161,7 +202,7 @@
                 នឹងចូលខ្លួនមកជំនួសតួនាទីអាកាសយានដ្ឋានអន្តរជាតិភ្នំពេញបច្ចុប្បន្ន។
             </p>
 
-            <p class="text-gray-700 leading-8">
+            <p class="text-gray-700 dark:text-white leading-8">
                 <span class="font-bold text-purple-700">
                     👮 កម្មសិទ្ធិរដ្ឋ៖
                 </span>
@@ -172,7 +213,7 @@
                 ដោយត្រូវរក្សាតម្លៃប្រវត្តិសាស្ត្រ និងផលប្រយោជន៍សាធារណៈ។
             </p>
 
-            <p class="text-gray-700 leading-8">
+            <p class="text-gray-700 dark:text-white leading-8">
                 <span class="font-bold text-purple-700">
                     👮 ការអភិវឌ្ឍតំបន់៖
                 </span>
@@ -186,14 +227,13 @@
         <div class="bg-purple-100 border-l-4 border-purple-700 p-5 rounded-xl mt-10">
 
             <p class="text-lg font-bold text-gray-800 leading-8">
-                <<< អាកាសយានដ្ឋាននេះបានចាប់ផ្តើមប្រតិបត្តិការជាផ្លូវការ
-                <span class="underline italic text-purple-700">
+                <<< អាកាសយានដ្ឋាននេះបានចាប់ផ្តើមប្រតិបត្តិការជាផ្លូវការ <span class="underline italic text-purple-700">
                     នៅថ្ងៃទី៩ ខែកញ្ញា ឆ្នាំ២០២៥
-                </span>
-                និងសម្ពោធជាផ្លូវការ
-                <span class="underline italic text-purple-700">
-                    នៅថ្ងៃទី២០ ខែតុលា ឆ្នាំ២០២៥ >>>
-                </span>
+                    </span>
+                    និងសម្ពោធជាផ្លូវការ
+                    <span class="underline italic text-purple-700">
+                        នៅថ្ងៃទី២០ ខែតុលា ឆ្នាំ២០២៥ >>>
+                    </span>
             </p>
 
         </div>
@@ -205,7 +245,7 @@
                 ឋានានុក្រមនៃការបង្កើតច្បាប់នៅកម្ពុជា
             </h2>
 
-            <p class="text-gray-700 leading-8 mb-5">
+            <p class="text-gray-700 dark:text-white leading-8 mb-5">
                 អ្នកដែលបង្កើតច្បាប់ និងបទបញ្ជាទាក់ទងនឹងវិស័យអាកាសចរស៊ីវិលនៅកម្ពុជា
                 រួមទាំងអាកាសយានដ្ឋានអន្តរជាតិតេជោ
                 គឺមានស្ថាប័នសំខាន់ៗចំនួនបីតាមឋានានុក្រម។
@@ -213,105 +253,131 @@
 
             <div class="space-y-5">
 
-                <p class="text-gray-700 leading-8">
+                <p class="text-gray-700 dark:text-white leading-8">
                     <span class="font-bold text-purple-700">
                         📖 រដ្ឋសភា និងព្រឹទ្ធសភា៖
                     </span>
-                ជាស្ថាប័ននីតិប្បញ្ញត្តិដែលមានតួនាទីពិនិត្យ
-                និងអនុម័តលើ “ច្បាប់” (Law) ។
+                    ជាស្ថាប័ននីតិប្បញ្ញត្តិដែលមានតួនាទីពិនិត្យ
+                    និងអនុម័តលើ “ច្បាប់” (Law) ។
 
 
                     ជាក់ស្តែង កាលពីខែមករា ឆ្នាំ២០២៦
-                ព្រឹទ្ធសភាបានអនុម័តជាឯកច្ឆន្ទលើ
-                <span class="font-semibold">
-                  សេចក្តីព្រាងច្បាប់ស្តីពីអាកាសចរស៊ីវិល
-                </span>
+                    ព្រឹទ្ធសភាបានអនុម័តជាឯកច្ឆន្ទលើ
+                    <span class="font-semibold">
+                        សេចក្តីព្រាងច្បាប់ស្តីពីអាកាសចរស៊ីវិល
+                    </span>
 
-                ដើម្បីពង្រឹងក្របខណ្ឌច្បាប់
-                ឱ្យស្របតាមស្តង់ដារអន្តរជាតិ ។
-              </p>
+                    ដើម្បីពង្រឹងក្របខណ្ឌច្បាប់
+                    ឱ្យស្របតាមស្តង់ដារអន្តរជាតិ ។
+                </p>
 
             </div>
 
             <!-- Card 2 -->
-            <div class="bg-gray-50 border border-gray-200 rounded-2xl p-5 shadow-sm">
+            <div class="bg-purple-100 border border-gray-200 rounded-2xl p-5 shadow-sm">
 
-              <p class="text-[17px] leading-9">
-                <span class="font-bold text-purple-700">
-                  📖.រាជរដ្ឋាភិបាល (គណៈរដ្ឋមន្ត្រី)៖
-                </span>
+                <p class="text-[17px] dark:text-black leading-9">
+                    <span class="font-bold text-purple-700">
+                        📖.រាជរដ្ឋាភិបាល (គណៈរដ្ឋមន្ត្រី)៖
+                    </span>
 
-                ជាស្ថាប័នអនុវត្តន៍
-                ដែលមានតួនាទីបង្កើត និងអនុវត្តន៍
-                “បទបញ្ជា” (Decree)
-                និង “សេចក្តីសម្រេច” (Prakas)
-                ដើម្បីគ្រប់គ្រងវិស័យអាកាសចរស៊ីវិល ។
+                    ជាស្ថាប័នអនុវត្តន៍
+                    ដែលមានតួនាទីបង្កើត និងអនុវត្តន៍
+                    “បទបញ្ជា” (Decree)
+                    និង “សេចក្តីសម្រេច” (Prakas)
+                    ដើម្បីគ្រប់គ្រងវិស័យអាកាសចរស៊ីវិល ។
 
-                ជាក់ស្តែង កាលពីខែមីនា ឆ្នាំ២០២៦
-                រដ្ឋាភិបាលបានចេញសេចក្តីសម្រេចលេខ ១២៣
-                ស្តីពីការគ្រប់គ្រង និងប្រតិបត្តិការ
-                អាកាសយានដ្ឋានអន្តរជាតិតេជោ ។
-              </p>
+                    ជាក់ស្តែង កាលពីខែមីនា ឆ្នាំ២០២៦
+                    រដ្ឋាភិបាលបានចេញសេចក្តីសម្រេចលេខ ១២៣
+                    ស្តីពីការគ្រប់គ្រង និងប្រតិបត្តិការ
+                    អាកាសយានដ្ឋានអន្តរជាតិតេជោ ។
+                </p>
 
             </div>
 
             <!-- Card 3 -->
-            <div class="bg-gray-50 border border-gray-200 rounded-2xl p-5 shadow-sm">
+            <div class="bg-purple-100 border border-gray-200 rounded-2xl p-5 shadow-sm">
 
-              <p class="text-[17px] leading-9">
-                <span class="font-bold text-purple-700">
-                  📖.រដ្ឋលេខាធិការដ្ឋានអាកាសចរស៊ីវិល (SSCA)៖
-                </span>
+                <p class="text-[17px] dark:text-black leading-9">
+                    <span class="font-bold text-purple-700">
+                        📖.រដ្ឋលេខាធិការដ្ឋានអាកាសចរស៊ីវិល (SSCA)៖
+                    </span>
 
-                ជាស្ថាប័នជំនាញ
-                ដែលមានភារកិច្ចរៀបចំគោលនយោបាយ
-                បទបញ្ជាបច្ចេកទេស
-                និងត្រួតពិនិត្យការអនុវត្តច្បាប់ ។
-                ស្ថាប័ននេះដឹកនាំដោយ
-                ឯកឧត្តមបណ្ឌិត
-                <span class="font-semibold">
-                  ម៉ៅ ហាវណ្ណាល់
-                </span>
+                    ជាស្ថាប័នជំនាញ
+                    ដែលមានភារកិច្ចរៀបចំគោលនយោបាយ
+                    បទបញ្ជាបច្ចេកទេស
+                    និងត្រួតពិនិត្យការអនុវត្តច្បាប់ ។
+                    ស្ថាប័ននេះដឹកនាំដោយ
+                    ឯកឧត្តមបណ្ឌិត
+                    <span class="font-semibold">
+                        ម៉ៅ ហាវណ្ណាល់
+                    </span>
 
-                ដែលជាអ្នកទទួលបន្ទុកការពារសេចក្តីព្រាងច្បាប់
-                នៅចំពោះមុខសភា ។
-              </p>
+                    ដែលជាអ្នកទទួលបន្ទុកការពារសេចក្តីព្រាងច្បាប់
+                    នៅចំពោះមុខសភា ។
+                </p>
 
             </div>
 
-          </div>
+        </div>
 
-          <!-- Summary -->
-          <div class="bg-green-50 border border-green-300 rounded-2xl p-6">
+        <!-- Summary -->
+        <div class="bg-green-50 border border-green-300 rounded-2xl p-6">
 
-            <p class="text-[17px] leading-9 font-medium">
+            <p class="text-[17px] dark:text-black leading-9 font-medium">
 
-              * សរុបមក ច្បាប់ត្រូវបានអនុម័តដោយ
+                * សរុបមក ច្បាប់ត្រូវបានអនុម័តដោយ
 
-              <span class="font-bold text-green-700">
-                អង្គនីតិប្បញ្ញត្តិ (សភា)
-              </span>
+                <span class="font-bold text-green-700">
+                    អង្គនីតិប្បញ្ញត្តិ (សភា)
+                </span>
 
-              ក្រោមការផ្ដួចផ្ដើម និងរៀបចំដោយ
+                ក្រោមការផ្ដួចផ្ដើម និងរៀបចំដោយ
 
-              <span class="font-bold text-green-700">
-                អង្គនីតិប្រតិបត្តិ
-                (រាជរដ្ឋាភិបាល និង SSCA)
-              </span>
+                <span class="font-bold text-green-700">
+                    អង្គនីតិប្រតិបត្តិ
+                    (រាជរដ្ឋាភិបាល និង SSCA)
+                </span>
 
-              *
+                *
 
             </p>
 
-          </div>
-
         </div>
-
-      </div>
 
     </div>
 
-  </div>
-
 </body>
+<script>
+    const buttons = document.querySelectorAll(".buttonToggle"); // use class
+    const icons = document.querySelectorAll(".iconChange");
+
+    // Click event for ALL buttons
+    buttons.forEach(btn => {
+        btn.addEventListener("click", () => {
+
+            document.documentElement.classList.toggle("dark");
+
+            const isDark = document.documentElement.classList.contains("dark");
+
+            localStorage.theme = isDark ? "dark" : "light";
+
+            icons.forEach(icon => {
+                icon.classList.toggle("fa-moon", !isDark);
+                icon.classList.toggle("fa-sun", isDark);
+            });
+        });
+    });
+
+    // Load saved theme on page start
+    if (localStorage.theme === "dark") {
+        document.documentElement.classList.add("dark");
+
+        icons.forEach(icon => {
+            icon.classList.remove("fa-moon");
+            icon.classList.add("fa-sun");
+        });
+    }
+</script>
+
 </html>

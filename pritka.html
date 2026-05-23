@@ -22,8 +22,9 @@
 </head>
 <body class="dark:bg-gray-900 bg-white">
 
-        <!-- Top Header -->
-    <div class="bg-white py-2 px-4 flex justify-end items-center gap-4 text-sm text-gray-600">
+    <!-- Top Header -->
+    <div
+        class="bg-white dark:bg-gray-900 dark:text-white py-2 px-4 flex justify-end items-center gap-4 text-sm text-gray-600">
         <a href="#" class="hover:text-blue-600">Facebook</a>
         <a href="#" class="hover:text-pink-600">Instagram</a>
         <a href="#" class="hover:text-sky-500">Telegram</a>
@@ -31,54 +32,68 @@
     </div>
 
     <!-- Main Navbar -->
-    <header class="sticky top-0 z-50 bg-white shadow-md">
-        <div class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
+    <header class="sticky top-0 z-50 bg-white shadow-md dark:bg-gray-900  dark:text-white">
+        <div class="max-w-7xl mx-auto flex items-center justify-between px-5 py-3">
 
             <div class="flex items-center gap-4">
                 <img src="https://asset.cambodia.gov.kh/tourism/2023/11/web-logo.png" alt="logo" class="h-16" />
 
                 <div>
-                    <h1 class="text-2xl font-bold text-sky-800">ក្រសួងទេសចរណ៍</h1>
+                    <h1 class="text-2xl font-bold text-blue-500">ក្រសួងទេសចរណ៍</h1>
                     <p class="text-sm uppercase tracking-widest text-gray-500">
                         Ministry of Tourism
                     </p>
                 </div>
             </div>
-
-            <nav class="hidden lg:flex items-center gap-6 font-medium text-gray-700">
+            <nav class="hidden lg:flex ml-auto items-center gap-6 font-medium dark:text-white  text-gray-700">
                 <a href="index.html" class="hover:text-blue-600">ទំព័រដើម</a>
                 <a href="starbent.html" class="hover:text-blue-600">អំពីស្ថាប័ន</a>
                 <a href="pritka.html" class="hover:text-blue-600">សេចក្តីថ្លែងការណ៍</a>
                 <a href="jbabKolyoubay.html" class="hover:text-blue-600">ច្បាប់និងគោលនយោបាយ</a>
                 <a href="komnothet.html" class="hover:text-blue-600">កំណត់ហេតុ</a>
                 <a href="sewakam.html" class="hover:text-blue-600">សេវាកម្ម</a>
+
             </nav>
+             <div class="ml-auto flex items-center  gap-4 dark:bg-gray-600 bg-gray-50 rounded-full p-1 px-3 mr-3">
+                <button class="buttonToggle"><i class="fa-solid fa-moon iconChange"></i></button>
+            </div>
+            
+            <div class="relative inline-block lg:hidden bg-gray-50 dark:bg-gray-600 rounded-full mr-12  text-left">
+                <div class="group">
+                    <button type="button"
+                        class="inline-flex justify-center items-center w-full px-4 py-2 text-sm font-medium text-black dark:bg-gray-400  hover:bg-gray-100 rounded-full focus:outline-none focus:bg-gray-700">
+                         <i class="fa-solid fa-bars"></i>
+                        <!-- Dropdown arrow -->
+                        <svg class="w-4 h-4 ml-2 -mr-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+                            fill="currentColor">
+                            <path fill-rule="evenodd" d="M10 12l-5-5h10l-5 5z" />
+                        </svg>
+                    </button>
+
+                    <!-- Dropdown menu -->
+                    <div
+                        class="absolute left-0 w-40  origin-top-left bg-white divide-y divide-gray-100 rounded-md shadow-lg opacity-0  group-hover:opacity-100 group-hover:visible transition duration-300">
+                        <div class="py-1">
+                            <a href="index.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">ទំព័រដើម</a>
+                            <a href="starbent.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">អំពីស្ថាប័ន</a>
+                            <a href="pritka.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">សេចក្តីថ្លែងការណ៍</a>
+                            <a href="jbabKolyoubay.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">ច្បាប់និងគោលនយោបាយ</a>
+                            <a href="komnothet.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">កំណត់ហេតុ</a>
+                            <a href="sewakam.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">សេវាកម្ម</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+           
+
 
             <img src="https://asset.cambodia.gov.kh/tourism/2023/11/IMG_3436-300x250.png" alt="kingdom"
                 class="hidden lg:block h-12" />
         </div>
     </header>
-    <!-- Navbar -->
-    <header class=" w-full sticky top-0 z-50">
-        <nav class="bg-blue-600 dark:bg-gray-900  text-white dark:text-gray-300 shadow-lg ">
-            <div class="container mx-auto flex flex-wrap  p-4 gap-4">
-                <div>
-                    <img src="https://asset.cambodia.gov.kh/tourism/2023/11/web-logo.png" alt="Logo"
-                        class="w-12 h-12 object-contain">
-                </div>
-                <h1 class="text-2xl font-bold text-left">
-                    Tourism Cambodia
-                </h1>
-                
-                <div class="ml-auto flex items-center gap-4">
-                     <button class="buttonToggle"><i class="fa-solid fa-moon iconChange"></i></button>
-                </div>
-                
-            </div>
-        </nav>
-    </header>
+
     <!-- Carousel -->
-    <section class="container h-150 ">
+    <section class="container mx-auto ">
         <div id="default-carousel" class="relative w-full" data-carousel="slide">
 
             <!-- Carousel wrapper -->
@@ -86,13 +101,13 @@
 
                 <!-- Item 1 -->
                 <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                    <img src="https://demo.cambodia.gov.kh/wp-content/uploads/2021/06/%E1%9E%94%E1%9F%92%E1%9E%9A%E1%9E%B6%E1%9E%9F%E1%9E%B6%E1%9E%91%E1%9E%A2%E1%9E%84%E1%9F%92%E1%9E%82%E1%9E%9A%E1%9E%9C%E1%9E%8F%E1%9F%92%E1%9E%8F-%E1%9E%AC%E1%9E%94%E1%9F%92%E1%9E%9A%E1%9E%B6%E1%9E%9F%E1%9E%B6%E1%9E%91%E1%9E%A2%E1%9E%84%E1%9F%92%E1%9E%82%E1%9E%9A%E1%9E%8F%E1%9E%BC%E1%9E%85-1.jpg"
-                        class="absolute block  object-cover" alt="Angkor Wat">
+                    <img src="https://c4.wallpaperflare.com/wallpaper/504/77/190/angkor-wat-cambodia-historic-ruins-architecture-hd-wallpaper-preview.jpg"
+                        class="absolute block w-full h-full object-cover" alt="Angkor Wat">
                 </div>
 
                 <!-- Item 2 -->
                 <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                    <img src="https://s9.kh1.co/image/w=650,h=391,q=100/54/546f319ca6c822b6be74501f4888378c250127b5.jpg"
+                    <img src="https://asset.cambodia.gov.kh/tourism/2023/11/Royal-Palace-in-Phnom-Penh-Capital-jpg.webp"
                         class="absolute block w-full h-full object-cover" alt="Cambodia Tourism">
                 </div>
 
@@ -534,8 +549,7 @@
             <div
                 class="bg-white dark:bg-gray-900 dark:text-white rounded-lg shadow-lg overflow-hidden hover:scale-105 transition duration-300">
 
-                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhcqe39wlD49dMs4x95eSIjvb1jWQEsQMe8uoXXnm7Qy6iK1zn49uMCqtCzanDdt1PbhJ72ODd6IydI11awsuvMy5c7cgrV-hUKIuwKceuX6l2g-hdDJYTT8lw
-                   wayfJv-_tgG9p-Sad6As/s640/1137.jpg"
+                <img src="https://vj-prod-website-cms.s3.ap-southeast-1.amazonaws.com/depositphotos267543038xl-1715657502123.jpg"
                     class="w-full h-72 object-cover rounded-2xl" alt="Event">
 
                 <div class="p-5">
@@ -570,7 +584,7 @@
             <div
                 class="bg-white dark:bg-gray-900 dark:text-white shadow-lg overflow-hidden hover:scale-105 transition duration-300 rounded-lg">
 
-                <img src="https://image.thmeythmey.com/pictures/2024/09/26/imgs1_.jpg"
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrAHfEH2UIova2UmF0tjDA91iknUAnu0WkCQ&s"
                     class="w-full h-72 object-cover rounded-b-lg" alt="Event">
 
                 <div class="p-5">
@@ -618,15 +632,15 @@
         <iframe class="mt-8"  autoplay  width="100%" height="500px"  src="https://www.youtube-nocookie.com/embed/fGrLyci6M4k?si=Umi6qCGfeNZmB0Aa" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen ></iframe>
     </div>
     <!-- Footer -->
-    <footer class="bg-gray-900 text-white container mx-auto mt-10 relative">
+    <footer class="bg-blue-900 text-white container mx-auto mt-10 relative">
 
         <!-- Main Footer Container -->
         <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-12">
 
             <!-- Logo Section -->
-            <div class="flex justify-center md:justify-start rounded-lg ">
+            <div class="flex justify-center md:justify-start">
                 <img src="https://asset.cambodia.gov.kh/tourism/2023/11/web-logo.png" alt="Logo"
-                    class="">
+                    class=" object-contain">
             </div>
 
             <!-- Information Section -->
@@ -640,8 +654,7 @@
 
                     <!-- Address -->
                     <div class="flex items-start gap-4">
-                        <i clas
-                      s="fa-solid fa-location-dot text-yellow-400 mt-1"></i>
+                        <i class="fa-solid fa-location-dot text-yellow-400 mt-1"></i>
 
                         <span>
                             ដីឡូត៍លេខ៣អា ផ្លូវលេខ១៦៩ សង្កាត់វាលវង់ ខណ្ឌ៧មករា
@@ -745,7 +758,7 @@
 
         <!-- Divider -->
         <div class="container mx-auto px-6">
-       <hr class="border-gray-700 my-8">
+            <hr class="border-gray-700 my-8">
         </div>
 
         <!-- Copyright -->
@@ -762,6 +775,7 @@
         </button>
 
     </footer>
+
     <!-- Flowbite JS -->
     <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
 
